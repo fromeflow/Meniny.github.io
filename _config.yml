@@ -12,7 +12,7 @@ paginate_path: "page:num"
 # presonal config
 domain: meniny.cn
 title: Meniny's Blog
-description: This is a Blog which is sharing IT skills and Informations. I hope you like it.
+description: This is my very own Blog which is collects and shares IT skills. I hope you like it.
 author: Meniny
 email: meniny#qq.com
 github: Meniny

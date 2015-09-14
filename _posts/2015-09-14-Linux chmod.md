@@ -1,9 +1,9 @@
 ---
 layout: post
-category: "Linux"
-title:  "Linux 指令：chmod"
-tags: [Linux]
-summary: "chmod 指令"
+category: "UNIX"
+title:  "UNIX/Linux 指令: chmod"
+tags: [UNIX,Linux]
+summary: "UNIX/Linux: chmod 指令
 ---
 变更文件或目录的权限。在Linux系统家族里，文件或目录权限的控制分别以读取，写入，执行3种一般权限来区分，另有3种特殊权限可供运用，再搭配拥有者与所属群组管理权限范围。您可以使用chmod指令去变更文件与目录的权限，设置方式采用文字或数字代号皆可。符号连接的权限无法变更，如果您对符号连接修改权限，其改变会作用在被连接的原始文件。
 权限范围的表示法如下：
