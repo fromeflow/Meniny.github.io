@@ -58,6 +58,6 @@ MIT-Scheme可以简单地通过下载并执行安装包来进行安装。
 第一行代码代表将工作目录切换到C:\doc\scheme。通过这条代码，MIT-Scheme移动工作路径切换到这个路径，你不需要再敲击程序的绝对路径来载入Scheme程序。第二行是定义`call-with-current-continuation`的缩略词。
 
 ---
-**Takafumi Shido** 著
+**Takafumi Shido** 著  
 **DeathKing** 译
 
