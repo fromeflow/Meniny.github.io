@@ -1,10 +1,6 @@
 markdown: redcarpet
 permalink: /:categories/:title.html
-<<<<<<< HEAD
 baseurl: /
-=======
-url: meniny.cn
->>>>>>> 2b0f9bf3302e9e2c62775b7bfa50c0039408c6e3
 lsi: false
 pygments: true
 safe: true
