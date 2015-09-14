@@ -1,9 +1,9 @@
 ---
 layout: post
 category: "UNIX"
-title:  "CentOS 图形界面与命令行界面切换"
-tags: [UNIX,Linux,CentOS]
-summary: "CentOS 图形界面与命令行界面切换"
+title:  "UNIX/Linux 终端常用指令"
+tags: [UNIX,Linux,CentOS,Terminal]
+summary: "UNIX/Linux 终端常用指令"
 ---
 常用终端快捷键：
 * `⌃` + `C`：这个是用来终止当前命令的快捷键，当然您也可以输入一大串字符，不想让它运行直接`⌃` + `C`，光标就会跳入下一行。
