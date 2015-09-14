@@ -1,6 +1,6 @@
 markdown: redcarpet
 permalink: /:categories/:title.html
-url: 
+url: meniny.cn
 lsi: false
 pygments: true
 safe: true
@@ -10,7 +10,7 @@ paginate: 8
 paginate_path: "page:num"
 
 # presonal config
-domain: Meniny.cn
+domain: meniny.cn
 title: Meniny's Blog
 description: iOS, OS X, Linux, UNIX, Reading...
 author: Meniny
