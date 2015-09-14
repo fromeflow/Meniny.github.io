@@ -19,6 +19,7 @@ summary: "UNIX/Linux Command: chmod"
 * `x`：执行或切换权限，数字代号为"1"。  
 * `-`：不具任何权限，数字代号为"0"。  
 * `s`：当文件被执行时，根据who参数指定的用户类型设置文件的`setuid`或者* `setgid`权限。  
+
 ###语法
 * `chmod [-cfRv][--help][--version][<权限范围>+/-/=<权限设置...>][文件或目录...]`  
 * `chmod [-cfRv][--help][--version][数字代号][文件或目录...]`   
