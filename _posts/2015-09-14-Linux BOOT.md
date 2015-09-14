@@ -5,8 +5,6 @@ title:  "Start-up Procedure of CentOS 6.5"
 tags: [UNIX,Linux,CentOS]
 summary: "Start-up Procedure of CentOS 6.5"
 ---
-**Author: @aming**
-
 Linux的启动其实和windows的启动过程很类似，不过windows我们是无法看到启动信息的，而Linux启动时我们会看到许多启动信息，例如某个服务是否启动。Linux系统的启动过程大体上可分为五部分：内核的引导、运行init、系统初始化、建立终端、用户登录系统。
 
 * 内核引导
@@ -65,4 +63,7 @@ Linux的启动其实和windows的启动过程很类似，不过windows我们是�
 > 在分析完用户名后，login将搜索 `/etc/passwd` 以及 `/etc/shadow` 来验证密码以及设置账户的其它信息，比如：主目录是什么、使用何种shell。如果没有指定主目录，将默认为根目录；如果没有指定shell，将默认为 `/bin/bash`。
 
 > login程序成功后，会向对应的终端在输出最近一次登录的信息(在 `/var/log/lastlog` 中有记录)，并检查用户是否有新邮件(在 `/usr/spool/mail/` 的对应用户名目录下)。然后开始设置各种环境变量：对于bash来说，系统首先寻找 `/etc/profile` 脚本文件，并执行它；然后如果用户的主目录中存在 `.bash_profile` 文件，就执行它，在这些文件中又可能调用了其它配置文件，所有的配置文件执行后后，各种环境变量也设好了，这时会出现大家熟悉的命令行提示符，到此整个启动过程就结束了。
+
+---
+**Author: @aming**
 
