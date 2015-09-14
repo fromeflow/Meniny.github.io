@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "分类：Categories"
+title: "Categories：Categories"
 ---
 <ul class="list-unstyled">
 {% for cat in site.categories %} 
@@ -13,3 +13,5 @@ title: "分类：Categories"
    {% endif %} 
 {% endfor %} 
 </ul>
+
+

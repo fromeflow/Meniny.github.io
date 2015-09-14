@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "归档：Archives"
+title: "Archives：Archives"
 ---
 <ul class="list-unstyled">
      {% for post in site.posts limit:100 %} 
@@ -13,3 +13,5 @@ title: "归档：Archives"
     <li><h4><span>{{ post.date | date_to_string }}</span>&raquo;<a href="{{ post.url }}">{{ post.title }}</a></h4></li> 
 	{% endfor %} 
 </ul> 
+
+

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "问答：Faqs"
+title: "F&Q：Faqs"
 ---
 记录工作中遇到的一些小问题及解决办法，以防忘记后重头再找答案。
 
@@ -28,3 +28,5 @@ Git查看、删除、重命名远程分支和tag: http://zengrong.net/post/1746.
   </script>
   <!-- UY END -->
 </div>
+
+
