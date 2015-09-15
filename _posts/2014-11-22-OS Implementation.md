@@ -147,7 +147,7 @@ limit 是整个表的大小 -1 字节，base 指向 IDT 表，设置 IDTR 寄存
 
 PIC 分为 Master 和 Slave ，每个 PIC 都有一个命令端口和一个数据端口，通过这两个端口可以读写 PIC 的寄存器。每个 PIC 都可连 8 个输入设备，x86下 Slave 需要通过 line 2 连接到 Master 上才能响应输入设备，连接的输入设备有中断请求的时候会产生 IRQ(Interrupt Request)，Master 产生 IRQ 0 ~ IRQ 7，Slave 产生 IRQ 8 ~ IRQ 15。保护模式下可以设定 PIC 产生的中断对应的 ISR 所在 IDT 中的 offset，通常设置为从 0x20 开始，到 0x2F 结束（0x0 到 0x1F 被异常占用）。
 
-PIC 的端口号如下表：
+* PIC 的端口号如下表：  
 
 PIC|IO Port
 ---|---
@@ -156,7 +156,7 @@ Master Data	|0x21
 Slave Command|0xA0
 Slave Data|0xA1
 
-PIC 产生的标准 IRQ 如下表：
+* PIC 产生的标准 IRQ 如下表：  
 
 IRQ|Description
 ---|---
