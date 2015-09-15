@@ -152,33 +152,32 @@ PIC 分为 Master 和 Slave ，每个 PIC 都有一个命令端口和一个数�
 
 PIC|IO Port
 :-:|:-:
-Master Command|0x20
-Master Data	|0x21
-Slave Command|0xA0
-Slave Data|0xA1
+`Master Command`|`0x20`
+`Master Data`|`0x21`
+`Slave Command`|`0xA0`
+`Slave Data`|`0xA1`
 
 
 * PIC 产生的标准 IRQ 如下表：  
 
-
 IRQ|Description
 :-:|:-:
-0|Programmable Interrupt Timer Interrupt
-1|Keyboard Interrupt
-2|Cascade (used internally by the two PICs. never raised)
-3|COM2 (if enabled)
-4|COM1 (if enabled)
-5|LPT2 (if enabled)
-6|Floppy Disk
-7|LPT1 / Unreliable "spurious" interrupt (usually)
-8|CMOS real-time clock (if enabled)
-9|Free for peripherals / legacy SCSI / NIC
-10|Free for peripherals / SCSI / NIC
-11|Free for peripherals / SCSI / NIC
-12|PS2 Mouse
-13|FPU / Coprocessor / Inter-processor
-14|Primary ATA Hard Disk
-15|Secondary ATA Hard Disk
+0|`Programmable Interrupt Timer Interrupt`
+1|`Keyboard Interrupt`
+2|`Cascade (used internally by the two PICs. never raised)`
+3|`COM2 (if enabled)`
+4|`COM1 (if enabled)`
+5|`LPT2 (if enabled)`
+6|`Floppy Disk`
+7|`LPT1 / Unreliable "spurious" interrupt (usually)`
+8|`CMOS real-time clock (if enabled)`
+9|`Free for peripherals / legacy SCSI / NIC`
+10|`Free for peripherals / SCSI / NIC`
+11|`Free for peripherals / SCSI / NIC`
+12|`PS2 Mouse`
+13|`FPU / Coprocessor / Inter-processor`
+14|`Primary ATA Hard Disk`
+15|`Secondary ATA Hard Disk`
 
 PIC 初始化的时候，要设置 Master 和 Slave 通过 line 2 相连，同时设置好 IRQ 对应的 ISR 在 IDT 中的起始中断号。PIC 提供一个 IMR(Interrupt Mask Register) 寄存器来标识中断是否屏蔽，设置 bit 位会屏蔽对应的 IRQ。当 IMR 未设置，并且 CPU 的中断打开，如果有设备中断请求发生，那么 ISR 将会执行。ISR 执行完毕之后要通知 PIC 中断处理完成，需要向 PIC 的命令端口写入一个 EOI(End Of Interrupt) 命令(0x20)，中断请求如果来自 Slave，那么需要先往 Slave 命令端口写入 EOI，再向 Master 命令端口写入 EOI。
 
