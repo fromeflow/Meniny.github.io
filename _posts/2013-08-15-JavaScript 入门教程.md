@@ -5,7 +5,6 @@ title:  "JavaScript 入门教程"
 tags: [JavaScript]    
 summary: "JavaScript 入门教程"  
 ---    
-## 第1章 JavaScript语言入门
 ### 1 为什么学习JavaScript
 提要：Javascript是学习脚本语言的首选。她兼容性好，绝大多数浏览器均支持Javascript，而且她功能强大，实现简单方便，入门简单，即使是程序设计新手也可以非常快速容易地使用JavaScript进行简单的编程。
  
