@@ -1,9 +1,9 @@
 ---
 layout: post
 category: "UNIX"
-title:  "UNIX/Linux 终端常用指令"
+title:  "UNIX/Linux 终端常用快捷键"
 tags: [UNIX,Linux,CentOS,Terminal]
-summary: "UNIX/Linux 终端常用指令"
+summary: "UNIX/Linux 终端常用快捷键"
 ---
 ###常用终端快捷键
 * `⌃` + `C`：这个是用来终止当前命令的快捷键，当然您也可以输入一大串字符，不想让它运行直接`⌃` + `C`，光标就会跳入下一行。  
