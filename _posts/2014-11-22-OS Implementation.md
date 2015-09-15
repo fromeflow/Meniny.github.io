@@ -149,17 +149,20 @@ PIC 分为 Master 和 Slave ，每个 PIC 都有一个命令端口和一个数�
 
 * PIC 的端口号如下表：  
 
+
 PIC|IO Port
----|---
+:-:|:-:
 Master Command|0x20
 Master Data	|0x21
 Slave Command|0xA0
 Slave Data|0xA1
 
+
 * PIC 产生的标准 IRQ 如下表：  
 
+
 IRQ|Description
----|---
+:-:|:-:
 0|Programmable Interrupt Timer Interrupt
 1|Keyboard Interrupt
 2|Cascade (used internally by the two PICs. never raised)
