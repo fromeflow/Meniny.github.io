@@ -43,8 +43,7 @@ summary: "iOS UITableView: Appearance of HeaderView & FooterView for Section"
 	    // Note: does not preserve gradient effect of original header
 	    // header.contentView.backgroundColor = [UIColor blackColor];
 	}
-
-通过UITableViewHeaderFooterView设置背景色的方法已经被废弃了。请用contentView.backgroundColor代替。
+	
   
 ***    
 ###<center>Powered by Meniny</center>    
