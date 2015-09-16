@@ -10,7 +10,7 @@ summary: "RegEx Syntax"
 ***
 
 ##正则表达式示例
-<table>
+<table border="1" cellpadding="10">
 <tr>
 <th>表达式</th>
 <th>匹配</th>
