@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "F&Q：Faqs"
+title: "F&Q"
 ---
 记录工作中遇到的一些小问题及解决办法，以防忘记后重头再找答案。
 

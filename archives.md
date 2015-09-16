@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Archives：Archives"
+title: "Archives"
 ---
 <ul class="list-unstyled">
      {% for post in site.posts limit:100 %} 

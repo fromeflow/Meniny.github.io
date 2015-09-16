@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tags
+title: "Tags"
 ---
 <div>
 {% for tag in site.tags %} 
@@ -12,3 +12,5 @@ title: Tags
 	</ul>
 {% endfor %}
 </div>
+
+
