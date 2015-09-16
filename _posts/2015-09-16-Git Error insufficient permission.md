@@ -22,7 +22,10 @@ summary: "Git Error: insufficient permission for adding an object to repository 
 
 	sudo -s
 	
-回车，无异常。
+回车，无异常，重新 `chmod`。
+
+	chmod -R 755 ~/Meniny.github.io
+
 接着用 `add`、`commit`、`push`，OK 无异常。
 
 
