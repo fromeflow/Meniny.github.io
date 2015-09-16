@@ -33,7 +33,7 @@ summary: "RegEx Syntax"
 
 ##正则表达式语法
 
-<table>
+<table border="1" cellpadding="10">
 <tr>
 <th>字符</th>
 <th>说明</th>
