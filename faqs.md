@@ -3,10 +3,10 @@ layout: default
 title: "F&Q"
 ---
 
-Having problems or advices with the Blog? 
-Need assistance figuring out how to get something done?
-Wanna correct some mistakes?
-Leave me a message.
+###Having problems or advices with the Blog?   
+###Need assistance figuring out how to get something done?  
+###Wanna correct some mistakes?  
+###Leave me a message.  
 
 <!-- Blog Comments -->
 <div class="media">
