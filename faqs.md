@@ -3,7 +3,10 @@ layout: default
 title: "F&Q"
 ---
 
-这是一个问答和留言板块。
+Having problems or advices with the Blog? 
+Need assistance figuring out how to get something done?
+Wanna correct some mistakes?
+Leave me a message.
 
 <!-- Blog Comments -->
 <div class="media">
