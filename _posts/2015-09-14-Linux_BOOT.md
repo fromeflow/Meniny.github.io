@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "UNIX"
-title:  "Start-up Procedure of CentOS 6.5"
+title:  "[转]Start-up Procedure of CentOS 6.5"
 tags: [UNIX,Linux,CentOS]
 summary: "Start-up Procedure of CentOS 6.5"
 ---

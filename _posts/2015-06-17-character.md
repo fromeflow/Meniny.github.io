@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "Other"
-title:  "字符编码"
+title:  "[转]字符编码"
 tags: [C,C++]
 summary: "字符编码"
 ---

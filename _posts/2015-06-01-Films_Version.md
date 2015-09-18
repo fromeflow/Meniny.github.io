@@ -1,7 +1,7 @@
 ---    
 layout: post    
 category: "Other"    
-title:  "各类电影版本解析"    
+title:  "[转]各类电影版本解析"    
 tags: [电影]    
 summary: "各类电影版本解析"  
 ---    

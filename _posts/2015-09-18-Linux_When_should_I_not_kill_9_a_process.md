@@ -1,7 +1,7 @@
 ---
 layout: post
 category: "unix"
-title:  "UNIX/Linux Command: When should I not kill 9 a process"
+title:  "[转]UNIX/Linux Command: When should I not kill 9 a process"
 tags: [UNIX,Linux]
 summary: "UNIX/Linux Command: When should I not kill 9 a process"
 ---
