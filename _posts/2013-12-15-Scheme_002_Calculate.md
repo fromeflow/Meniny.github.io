@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Scheme"
+category: "scheme"
 title:  "[转]Scheme 002：Calculate"
 tags: [Scheme]
 summary: "Scheme 002：Calculate"

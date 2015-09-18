@@ -1,6 +1,6 @@
 ---
 layout: post
-category: "Scheme"
+category: "scheme"
 title:  "[转]Scheme 001：Install MIT-Scheme"
 tags: [Scheme]
 summary: "Scheme 001：Install MIT-Scheme"
