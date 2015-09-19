@@ -26,7 +26,7 @@ summary: "Linux 配置 IP"
 
 下面我们来了解一下它们都有什么作用:
 
-<table border="1" cellpadding="10">
+<table border="1" class="table table-bordered table-striped table-condensed">
 <tr><th>DEVICE</th><th>设备名称</th></tr>
 <tr><th>HWADDR</th><th>MAC 地址</th></tr>
 <tr><th>TYPE</th><th>网络类型(Ethernet: 以太网)</th></tr>

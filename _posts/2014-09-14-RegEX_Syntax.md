@@ -10,7 +10,7 @@ summary: "RegEx Syntax"
 ***
 
 ##正则表达式示例
-<table border="1" cellpadding="10">
+<table border="1" class="table table-bordered table-striped table-condensed">
 <tr>
 <th>表达式</th>
 <th>匹配</th>
@@ -33,7 +33,7 @@ summary: "RegEx Syntax"
 
 ##正则表达式语法
 
-<table border="1" cellpadding="10">
+<table border="1" class="table table-bordered table-striped table-condensed">
 <tr>
 <th>字符</th>
 <th>说明</th>

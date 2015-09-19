@@ -149,7 +149,7 @@ PIC 分为 Master 和 Slave ，每个 PIC 都有一个命令端口和一个数�
 
 * PIC 的端口号如下表：  
 
-<table>
+<table border="1" class="table table-bordered table-striped table-condensed">
 <tr><th>PIC</th><th>IO Port</th></tr>
 <tr><th>`Master Command`</th><th>`0x20`</th></tr>
 <tr><th>`Master Data`</th><th>`0x21`</th></tr>
@@ -159,7 +159,7 @@ PIC 分为 Master 和 Slave ，每个 PIC 都有一个命令端口和一个数�
 
 * PIC 产生的标准 IRQ 如下表：  
 
-<table>
+<table border="1" class="table table-bordered table-striped table-condensed">
 <tr><th>IRQ</th><th>Description</th></tr>
 <tr><th>0</th><th>`Programmable Interrupt Timer Interrupt`</th></tr>
 <tr><th>1</th><th>`Keyboard Interrupt`</th></tr>

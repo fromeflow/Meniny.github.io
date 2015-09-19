@@ -18,7 +18,7 @@ summary: "UNIX/Linux 文件权限浅析"
 
 * 第`9`位表示文件类型,可以为`p`、`d`、`l`、`s`、`c`、`b`和`-`。    
 _
-<table border="1" cellpadding="10">
+<table border="1" class="table table-bordered table-striped table-condensed">
 <tr><th>权限</th><th>说明</th></tr>
 <tr><th>p</th><th>命名管道文件</th></tr>
 <tr><th>d</th><th>目录</th></tr>
