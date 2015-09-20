@@ -1,9 +1,9 @@
 ---
 layout: post
 category: "php"
-title:  "PHP 与 RegEx 浅析: Unknown Modifier 错误"
+title:  "PHP 与 RegEx 浅析 003: Unknown Modifier 错误"
 tags: [PHP,RegEx]
-summary: "PHP 与 RegEx 浅析: Unknown Modifier 错误"
+summary: "PHP 与 RegEx 浅析 003: Unknown Modifier 错误"
 ---
 有时候，你的程序可能会忽然报告 `Unknown Modifier` 错误，这通常是因为你在创建模式参数时没有添加分隔符，例如你希望匹配 HTML 标签：
 	
