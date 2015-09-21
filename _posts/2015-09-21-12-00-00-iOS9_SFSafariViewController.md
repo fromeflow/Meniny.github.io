@@ -44,8 +44,8 @@ summary: "iOS 9 特性: SFSafariViewController"
 	
 接下来，像使用其他控制器一样简单，它拥有两个初始化方法:
 
-	- initWithURL:
-	- initWithURL:entersReaderIfAvailable:Designated Initializer
+	initWithURL:
+	initWithURL:entersReaderIfAvailable:Designated Initializer
 	 
 来看一个简单地例子:
 
