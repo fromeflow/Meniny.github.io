@@ -5,7 +5,7 @@ title:  "Linux 配置 IP"
 tags: [UNIX,Linux,IP]
 summary: "Linux 配置 IP"
 ---
-废话少说，直接进入正题，首先需要找到配置文件，我们用 `vi` 打开它:
+首先需要找到配置文件，以 `eth0` 为例，用 `vi` 打开它:
 
 	vi /etc/sysconfig/network-script/ifcfg-eth0
 	
