@@ -1,9 +1,9 @@
 ---
 layout: post  
-category: "ios"  
-title: "iOS : 为什么 BOOL 可以赋值为 nil"  
-tags: [iOS,BOOL,nil]  
-summary: "iOS : 为什么 BOOL 可以赋值为 nil"  
+category: "unix"  
+title: "UNIX/Linux : File System"  
+tags: [UNIX,Linux,File System]  
+summary: "UNIX/Linux : File System"  
 ---
 如图:
 
