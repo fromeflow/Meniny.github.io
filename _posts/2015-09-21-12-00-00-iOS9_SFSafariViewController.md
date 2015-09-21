@@ -86,3 +86,5 @@ summary: "iOS 9 特性: SFSafariViewController"
 	safariViewController(controller: SFSafariViewController, activityItemsForURL: NSURL, title: String?) -> [UIActivity]
 
 
+如果有兴趣，你还可以参考 [***SFSafariViewController の概要***](http://dev.classmethod.jp/smartphone/iphone/introducing-sfsafariviewcontroller/) 一文。
+
