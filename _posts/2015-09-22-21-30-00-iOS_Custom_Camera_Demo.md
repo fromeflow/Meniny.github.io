@@ -98,9 +98,9 @@ summary: "iOS : 自定义相机实例 Demo"
 在合适的地方，例如 `viewDidLoad` 中调用初始化和配置预览层的方法:
 
 	// 初始化
-	    [self initialSession];
-	    // 配置预览层
-	    [self setUpCameraLayer];
+	[self initialSession];
+	// 配置预览层
+	[self setUpCameraLayer];
 	    
 控制器视图显示后摄像头开始摄取图像:
 
@@ -149,8 +149,6 @@ summary: "iOS : 自定义相机实例 Demo"
 
 	#pragma mark - 切换摄像头
 	- (void)toggleCamera {
-	    [_toggleButton setUserInteractionEnabled:NO];
-	    [_shutterButton setUserInteractionEnabled:NO];
 	    NSUInteger cameraCount = [[AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo] count];
 	    if (cameraCount > 1) {
 	        NSError *error;
@@ -178,21 +176,19 @@ summary: "iOS : 自定义相机实例 Demo"
 	            [self showOpoosAlertViewWithContentText:[NSString stringWithFormat:@"%@", error] durationTime:2.0];
 	        }
 	    }
-	    [_toggleButton setUserInteractionEnabled:YES];
-	    [_shutterButton setUserInteractionEnabled:YES];
 	}
 	
 捕获图像拍摄照片:
 	
 	#pragma mark - 拍照
 	- (void)shutterCamera {
-	    [_shutterButton setUserInteractionEnabled:NO];
 	    AVCaptureConnection * videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
 	    if (!videoConnection) {
 	        [self showOpoosAlertViewWithContentText:@"拍摄失败" durationTime:2.0];
 	        return;
 	    }
 	    
+	    // 捕获图像
 	    [self.stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
 	        if (imageDataSampleBuffer == NULL) {
 	            return;
