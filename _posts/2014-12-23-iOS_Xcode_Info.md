@@ -32,11 +32,11 @@ summary: "Xcode : 修改新创建文件的默认注释"
 
 选择我们进入 `File Templates` 文件夹，如果你熟悉新建文件时的界面，那么你一定已经拍着大腿说 "原来如此":
 
-![File Templates](http://upload-images.jianshu.io/upload_images/402461-948476271adce724.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![File Templates](http://img.blog.csdn.net/20150922222228206?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 是的，`File Templates` 下的子目录与新建文件界面的图标一一对应，由于我们要修改源代码文件的注释，那么我们选择进入 `Source` => `Cocoa Touch Class.xctemplate`:
 
-![Cocoa Touch Class.xctemplate](http://upload-images.jianshu.io/upload_images/402461-835efa99be2a123a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Cocoa Touch Class.xctemplate](http://img.blog.csdn.net/20150922222210755?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 这里有很多文件，它们对应了不同类型不同语言的源文件，随便找一个，例如 `NSObjectObjective-C`:
 
@@ -60,14 +60,15 @@ summary: "Xcode : 修改新创建文件的默认注释"
 	//
 	//  ___FILENAME___
 	//  ___PROJECTNAME___
+	//
 	//    ／￣￣￣Y￣￣。 ＼
 	//   l　　　　　　　　　l
 	//　ヽ,,,,,／ ￣￣￣￣ ヽﾉ
 	//　|::::: 　　　　　　　l
 	//　|:::　　 ＿_　　　　 |
 	//（6　　　＼●　     ●  丨
-	//　!　　　　   )・・(　 l
-	//　ヽ 　 　　　(三)　 ﾉ
+	//　!　　　　  )・・(    ﾉ
+	//　ヽ 　 　　　(三)　  ﾉ
 	//　／＼　   　  二　ノ
 	// /⌒ヽ. ‘ー — 一 ＼
 	//l　　　 |👍🏻　　　ヽoヽ👍🏻
