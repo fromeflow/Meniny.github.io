@@ -5,7 +5,7 @@ title: "iOS 9 特性: SFSafariViewController"
 tags: [iOS,SFSafariViewController]  
 summary: "iOS 9 特性: SFSafariViewController"  
 ---
-除了我在前面 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/ios/23-08-00-iOS9_URLScheme.html)、[***Bitcode***](http://www.meniny.cn/ios/23-07-00-iOS9_Bitcode.html) 和 [***ATS***](http://www.meniny.cn/ios/23-06-00-iOS9_ATS.html) 等需要开发人员进行适配的新举措外，iOS 9 还引入了很多实用的新特性，本文主要来介绍其中之一: ***`SFSafariViewController`***。
+除了我在前面 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/ios/23-08-00-iOS9_URLScheme.html)、[***Bitcode***](http://www.meniny.cn/ios/23-07-00-iOS9_Bitcode.html)、[***ATS***](http://www.meniny.cn/ios/23-06-00-iOS9_ATS.html) 和 [***后台定位***](http://www.meniny.cn/ios/2015-09-18-23-09-00-iOS9_Location.html) 等需要开发人员进行适配的新举措外，iOS 9 还引入了很多实用的新特性，本文主要来介绍其中之一: ***`SFSafariViewController`***。
 
 在 iOS 9 出现之前，我们访问 Web 页面有这样几种方式:
 
