@@ -25,7 +25,9 @@ category: "ios"
 
 事实上 Xcode 已经给我们提供了一段与 `nextKeyboardButton` 相关的代码来实现输入法之间的切换，这些代码已经可以运行使用，当然，运行后你需要在 `设置` => `通用` => `键盘` 中添加你的键盘才能使用。如果你不需要这些默认代码，可以将其删除，但需要注意的是，如果你的输入法想要通过审核，那么它***必须具有明显的 UI 来帮助用户切换到其他输入法***。切换输入法的核心代码是其实只是调用 [advanceToNextInputMode](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIInputViewController_Class/index.html#//apple_ref/occ/instm/UIInputViewController/advanceToNextInputMode) 方法:
 
+```oc
 	button.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside)
+```	
 	
 你也可以参阅 [***官方文档***](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/Keyboard.html#//apple_ref/doc/uid/TP40014214-CH16-SW4)。
 
@@ -35,18 +37,18 @@ category: "ios"
 
 按照你自己的意愿创建控件并布局后，接下来要实现的是基本的输入和删除功能，这需要在 [textDocumentProxy](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIInputViewController_Class/index.html#//apple_ref/occ/instp/UIInputViewController/textDocumentProxy) 中调用 [UIKeyInput](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIKeyInput_Protocol/index.html#//apple_ref/occ/intf/UIKeyInput) 协议中的 [insertText](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIKeyInput_Protocol/index.html#//apple_ref/occ/intfm/UIKeyInput/insertText:) 和 [deleteBackward](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIKeyInput_Protocol/index.html#//apple_ref/occ/intfm/UIKeyInput/deleteBackward) 方法，其中 `textDocumentProxy` 代表了当前文本输入对象，符合 [UITextDocumentProxy 协议](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITextDocumentProxy_Protocol/index.html#//apple_ref/occ/intf/UITextDocumentProxy)。
 
-```c
+```oc
 let proxy = textDocumentProxy as UITextDocumentProxy
 ```
 
 * 如果需要输入:
 
-```c
+```oc
 proxy.insertText("Meniny")
 ```
 * 如果需要删除:  
 
-```c
+```oc
 proxy.deleteBackward()
 ```
 
@@ -68,7 +70,7 @@ proxy.deleteBackward()
 
 你一定见过一些输入法例如百度输入法、搜狗输入法等支持在部分应用中执行换行操作，事实上这个功能的实现也很简单，只需要插入一个回车(此处代码接上文):
 
-```c
+```oc
 	proxy.insertText("\r")
 ```
 
