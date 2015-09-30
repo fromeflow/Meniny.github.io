@@ -23,7 +23,7 @@ blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
+table, table th, table td {
 	border-collapse: collapse;
 	border-spacing: 1;
 	border-width: 1px;
