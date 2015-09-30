@@ -15,34 +15,34 @@ Linux的启动其实和windows的启动过程很类似，不过windows我们是�
 
 > `init` 进程是系统所有进程的起点，您可以把它比拟成系统所有进程的老祖宗，没有这个进程，系统中任何进程都不会启动。`init` 最主要的功能就是准备软件执行的环境，包括系统的主机名、网络设定、语言、文件系统格式及其他服务的启动等。 而所有的动作都会通过 init的配置文件`/etc/inittab`来规划，而`inittab` 内还有一个很重要的设定内容，那就是默认的 `runlevel` (开机运行级别)。先来看看运行级别Run level,Linux就是通过设定run level来规定系统使用不同的服务来启动，让Linux的使用环境不同。我们来看看这个`inittab`文件里面的支持级别。
 
-```
-	# inittab is only used by upstart for the default runlevel.
-	#
-	# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
-	#
-	# System initialization is started by /etc/init/rcS.conf
-	#
-	# Individual runlevels are started by /etc/init/rc.conf
-	#
-	# ⌃-⌥-⌫ is handled by /etc/init/control-⌥-⌫.conf
-	#
-	# Terminal gettys are handled by /etc/init/tty.conf and /etc/init/serial.conf,
-	# with configuration in /etc/sysconfig/init.
-	#
-	# For information on how to write upstart event handlers, or how
-	# upstart works, see init(5), init(8), and initctl(8).
-	#
-	# Default runlevel. The runlevels used are:
-	#   0 - halt (Do NOT Setter initdefault to this)
-	#   1 - Single user mode
-	#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)
-	#   3 - Full multiuser mode
-	#   4 - unused
-	#   5 - X11
-	#   6 - reboot (Do NOT Setter initdefault to this)
-	#
-	id:3:initdefault:
-```
+{% highlight shell %}
+# inittab is only used by upstart for the default runlevel.
+#
+# ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
+#
+# System initialization is started by /etc/init/rcS.conf
+#
+# Individual runlevels are started by /etc/init/rc.conf
+#
+# ⌃-⌥-⌫ is handled by /etc/init/control-⌥-⌫.conf
+#
+# Terminal gettys are handled by /etc/init/tty.conf and /etc/init/serial.conf,
+# with configuration in /etc/sysconfig/init.
+#
+# For information on how to write upstart event handlers, or how
+# upstart works, see init(5), init(8), and initctl(8).
+#
+# Default runlevel. The runlevels used are:
+#   0 - halt (Do NOT Setter initdefault to this)
+#   1 - Single user mode
+#   2 - Multiuser, without NFS (The same as 3, if you do not have networking)
+#   3 - Full multiuser mode
+#   4 - unused
+#   5 - X11
+#   6 - reboot (Do NOT Setter initdefault to this)
+#
+id:3:initdefault:
+{% endhighlight %}
 
 > `inittab`配置文件格式和之前老版本CentOS5或者更老版本比有很大改动。`Runlevels`共七个级别，0表示关机，1表示单用户，2表示没有网络的命令行级别，3命令行级别（大多服务器都用这个级别），4为保留级别，5为图形化级别，6为重启。这个文件中除了最后一行外，其他都为注释行，也就是说最后一行才是关键，它用来指定服务器跑哪个级别，这里除了可以设置2,3,5外其他级别都不能设置。在该文件的前面部分，可以看到很多行都提及到某个配置文件，而所有配置文件都是在`/etc/init/`目录下。
 

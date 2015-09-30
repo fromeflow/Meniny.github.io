@@ -26,11 +26,15 @@ summary: "PHP 与 RegEx 浅析 003: Unknown Modifier 错误"
 	
 解决办法你一定已经想到了，十分简单：
 
-	preg_match('/<(/w+)(.*?)>/', $html)
+{% highlight php %}
+preg_match('/<(/w+)(.*?)>/', $html)
+{% endhighlight %}
 
 但是，或许你会意识到另外一个问题，尽管在 PHP 5 中的新提示中出现函数名在一定程度上可以更好地帮助你找到问题所在，但在某些情况下并不会报告错误，还是需要花费很多精力来寻找问题，例如：
 
-	preg_match('<(/w+)(.*?)>', $html)
+{% highlight php %}
+preg_match('<(/w+)(.*?)>', $html)
+{% endhighlight %}
 	
 这与刚才的解决办法相比其实就是去掉了分隔符，这段代码并不会报错，因为在这种情况下 `(/w+)(.*?)` 部分是一个合法的正则表达式，唯一的问题在于，它不能匹配你希望的结果。
 

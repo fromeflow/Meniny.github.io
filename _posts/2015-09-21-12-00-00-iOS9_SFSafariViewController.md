@@ -40,19 +40,25 @@ summary: "iOS 9 特性: SFSafariViewController"
 
 首先，在使用 `SFSafariViewController` 之前我们需要引入 `Safari Services`:
 
-	import SafariServices
+{% highlight swift %}
+import SafariServices
+{% endhighlight %}
 	
 接下来，像使用其他控制器一样简单，它拥有两个初始化方法:
 
-	initWithURL:
-	initWithURL:entersReaderIfAvailable:Designated Initializer
+{% highlight swift %}
+initWithURL:
+initWithURL:entersReaderIfAvailable:Designated Initializer
+{% endhighlight %}
 	 
 来看一个简单地例子:
 
-	func openWithSafariVC(sender: AnyObject) {
-		let svc = SFSafariViewController(URL: NSURL(string: "http://www.meniny.cn/")!)
-		self.presentViewController(svc, animated: true, completion:?nil)
-	}
+{% highlight swift %}
+func openWithSafariVC(sender: AnyObject) {
+	let svc = SFSafariViewController(URL: NSURL(string: "http://www.meniny.cn/")!)
+	self.presentViewController(svc, animated: true, completion:?nil)
+}
+{% endhighlight %}
 
 (在此之前，你可能需要配置 [***URLSchemes***](http://www.meniny.cn/ios/23-08-00-iOS9_URLScheme.html)、[***Bitcode***](http://www.meniny.cn/ios/23-07-00-iOS9_Bitcode.html) 和 [***ATS***](http://www.meniny.cn/ios/23-06-00-iOS9_ATS.html) )
 
@@ -61,30 +67,39 @@ summary: "iOS 9 特性: SFSafariViewController"
 如果你试过了前面的代码，你可能已经发现，这个 `SFSafariViewController` 无法关闭，这是因为我们还没有遵守
  `SFSafariViewControllerDelegate` 协议:
 
-	class ViewController: UIViewController, SFSafariViewControllerDelegate {
-		...
-	}
+{% highlight swift %}
+class ViewController: UIViewController, SFSafariViewControllerDelegate {
+	...
+}
+{% endhighlight %}
 
 当然，还需要在前面的 `openWithSafariVC(sender:)` 方法中设置代理:
 
-	svc.delegate = self
+{% highlight swift %}
+svc.delegate = self
+{% endhighlight %}
 
 遵守协议之后，当然还需要实现其相关方法，例如我们前面说到的关闭功能:
 
-	func safariViewControllerDidFinish(controller: SFSafariViewController) {
-		controller.dismissViewControllerAnimated(true, completion:?nil)
-	}
+{% highlight swift %}
+func safariViewControllerDidFinish(controller: SFSafariViewController) {
+	controller.dismissViewControllerAnimated(true, completion:?nil)
+}
+{% endhighlight %}
 	
 如果 ***`Done` 按钮被点击***，将会执行上面的 `safariViewControllerDidFinish(controller: SFSafariViewController)` 方法。
 
 类似的，当***页面载入完成***，会执行:
 
-	safariViewController(controller: SFSafariViewController, didCompleteInitialLoad: Bool)
+{% highlight swift %}
+safariViewController(controller: SFSafariViewController, didCompleteInitialLoad: Bool)
+{% endhighlight %}
 
 此外你还可以用下面的方法***定制 Action 菜单***:
 
-	safariViewController(controller: SFSafariViewController, activityItemsForURL: NSURL, title: String?) -> [UIActivity]
-
+{% highlight swift %}
+safariViewController(controller: SFSafariViewController, activityItemsForURL: NSURL, title: String?) -> [UIActivity]
+{% endhighlight %}
 
 如果有兴趣，你还可以参考 [***SFSafariViewController の概要***](http://dev.classmethod.jp/smartphone/iphone/introducing-sfsafariviewcontroller/) 一文。
 

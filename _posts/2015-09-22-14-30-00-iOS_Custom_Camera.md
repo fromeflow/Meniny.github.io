@@ -69,24 +69,31 @@ summary: "iOS : 自定义相机实现视频录制和照片拍摄"
 
 * 创建输入输出设备:
 
-		AVCaptureDeviceInput *captureInput = [AVCaptureDeviceInput deviceInputWithDevice:[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo] error:nil];
-		AVCaptureDeviceInput *microphone = [AVCaptureDeviceInput deviceInputWithDevice:[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio] error:nil];
-		captureOutput = [[AVCaptureMovieFileOutput alloc] init]; 
+{% highlight objective-c %}
+AVCaptureDeviceInput *captureInput = [AVCaptureDeviceInput deviceInputWithDevice:[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo] error:nil];
+AVCaptureDeviceInput *microphone = [AVCaptureDeviceInput deviceInputWithDevice:[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeAudio] error:nil];
+captureOutput = [[AVCaptureMovieFileOutput alloc] init]; 
+{% endhighlight %}
 
 * 创建 `AVCaptureSession` 实例:
 
-		self.captureSession = [[AVCaptureSession alloc] init];
+{% highlight objective-c %}
+self.captureSession = [[AVCaptureSession alloc] init];
+{% endhighlight %}
 
 * 添加输入输出设备:
 
-		[self.captureSession addInput:captureInput];
-		[self.captureSession addInput:microphone];
-		[self.captureSession addOutput:self.captureOutput];
+{% highlight objective-c %}
+[self.captureSession addInput:captureInput];
+[self.captureSession addInput:microphone];
+[self.captureSession addOutput:self.captureOutput];
+{% endhighlight %}
 
 * 配置 `AVCaptureSession` 属性(此处使用中等质量):
 
-		[self.captureSession setSessionPreset:AVCaptureSessionPresetMedium]
-	
+{% highlight objective-c %}
+[self.captureSession setSessionPreset:AVCaptureSessionPresetMedium]
+{% endhighlight %}
 		
 <table border="1" class="table table-bordered table-striped table-condensed">
 <tr><th>类型</th><th>质量</th><th>说明</th></tr>
@@ -100,39 +107,49 @@ summary: "iOS : 自定义相机实现视频录制和照片拍摄"
 	  
 * 构建方法用于启动编码(视频编码: H.264，音频编码: AAC):
 
-		- (void)startRecording {
-			[captureOutput startRecordingToOutputFileURL:[self tempFileURL] recordingDelegate:self];
+{% highlight objective-c %}
+- (void)startRecording {
+	[captureOutput startRecordingToOutputFileURL:[self tempFileURL] recordingDelegate:self];
 				}
+{% endhighlight %}
 	  
 * 调用方法上述启动编码:
 
-		[self performSelector:@selector(startRecording) withObject:nil afterDelay:10.0];
-		[self.captureSession startRunning];
+{% highlight objective-c %}
+[self performSelector:@selector(startRecording) withObject:nil afterDelay:10.0];
+[self.captureSession startRunning];
+{% endhighlight %}
 
 * 遵守 `AVCaptureFileOutputRecordingDelegate` 协议:
 
-		<AVCaptureFileOutputRecordingDelegate>
+{% highlight objective-c %}
+<AVCaptureFileOutputRecordingDelegate>
+{% endhighlight %}
 
 * 处理编码:  
 
-		- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray *)connections {
-		    NSLog(@"start record video");
-		}
+{% highlight objective-c %}
+- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray *)connections {
+    NSLog(@"start record video");
+}
 	
-		- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error {
-		    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
-		    [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL completionBlock:^(NSURL *assetURL, NSError *error) {
-				if (error) {
-					NSLog(@"Error");
-				} else {
-					NSLog(@"%@", [assetURL path]);
-				}
-			}];
+- (void)captureOutput:(AVCaptureFileOutput *)captureOutput didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray *)connections error:(NSError *)error {
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    [library writeVideoAtPathToSavedPhotosAlbum:outputFileURL completionBlock:^(NSURL *assetURL, NSError *error) {
+		if (error) {
+			NSLog(@"Error");
+		} else {
+			NSLog(@"%@", [assetURL path]);
 		}
+	}];
+}
+{% endhighlight %}
 
 * 停止编码:
 
-		[self.captureSession stopRecording];
+{% highlight objective-c %}
+[self.captureSession stopRecording];
+{% endhighlight %}
 
 ### 拍摄照片
 
@@ -140,51 +157,59 @@ summary: "iOS : 自定义相机实现视频录制和照片拍摄"
 
 * 创建设备:
 
-		AVCaptureStillImageOutput *stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+{% highlight objective-c %}
+AVCaptureStillImageOutput *stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+{% endhighlight %}
 
 * 配置输出参数:
 
-		NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys: AVVideoCodecJPEG, AVVideoCodecKey, nil];
+{% highlight objective-c %}
+NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys: AVVideoCodecJPEG, AVVideoCodecKey, nil];
 		
-		[stillImageOutput setOutputSettings:outputSettings];
+[stillImageOutput setOutputSettings:outputSettings];
+{% endhighlight %}
 
 * 捕获图像:
 
 	* 获得链接与端口
 
-			AVCaptureConnection *videoConnection = nil;
-			for (AVCaptureConnection *connection in stillImageOutput.connections) {
-				for (AVCaptureInputPort *port in [connection inputPorts]) {
-					if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
-						videoConnection = connection;
-						break;
-					}
-				}
-				if (videoConnection) {
-					break;
-				}
-			}
+{% highlight objective-c %}
+AVCaptureConnection *videoConnection = nil;
+for (AVCaptureConnection *connection in stillImageOutput.connections) {
+	for (AVCaptureInputPort *port in [connection inputPorts]) {
+		if ([[port mediaType] isEqual:AVMediaTypeVideo] ) {
+			videoConnection = connection;
+			break;
+		}
+	}
+	if (videoConnection) {
+		break;
+	}
+}
+{% endhighlight %}
 
 	* 处理图像
 
-			[[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-				ALAssetsLibraryWriteImageCompletionBlock completionBlock = ^(NSURL *assetURL, NSError *error) {
-		          if (error) {
-					}
-		        };
-		        
-		        if (imageDataSampleBuffer != NULL) {
-	              NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-	              ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];	 
-	              UIImage *image = [[UIImage alloc] initWithData:imageData];
-	              [library writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation]
-	              completionBlock:completionBlock];
-		        } else {
-					completionBlock(nil, error);
-				}
+{% highlight objective-c %}
+[[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+	ALAssetsLibraryWriteImageCompletionBlock completionBlock = ^(NSURL *assetURL, NSError *error) {
+     if (error) {
+		}
+   };
+   
+   if (imageDataSampleBuffer != NULL) {
+    NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];	 
+    UIImage *image = [[UIImage alloc] initWithData:imageData];
+    [library writeImageToSavedPhotosAlbum:[image CGImage] orientation:(ALAssetOrientation)[image imageOrientation]
+    completionBlock:completionBlock];
+   } else {
+		completionBlock(nil, error);
+	}
 	
-		        if ([[self delegate] respondsToSelector:@selector(captureManagerStillImageCaptured:)]) {
-					[[self delegate] captureManagerStillImageCaptured:self];
-		        }
-			}];
+   if ([[self delegate] respondsToSelector:@selector(captureManagerStillImageCaptured:)]) {
+		[[self delegate] captureManagerStillImageCaptured:self];
+   }
+}];
+{% endhighlight %}
 

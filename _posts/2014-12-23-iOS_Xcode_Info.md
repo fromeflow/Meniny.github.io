@@ -7,13 +7,15 @@ summary: "Xcode : 修改新创建文件的默认注释"
 ---
 通常我们在 Xcode 中新建源代码文件，会有一些自动生成的注释，他们形如下面这样:
 
-	//
-	//  AppDelegate.m
-	//  Spyhole
-	//
-	//  Created by Meniny on 14/6/23.
-	//  Copyright © 2014年 Meniny. All rights reserved.
-	//
+{% highlight objective-c %}
+//
+//  AppDelegate.m
+//  Spyhole
+//
+//  Created by Meniny on 14/6/23.
+//  Copyright © 2014年 Meniny. All rights reserved.
+//
+{% endhighlight %}
 
 不知道大家有没有想过修改这些文字? 现在，我们就来看看怎样去自定义这些信息。
 
@@ -40,47 +42,51 @@ summary: "Xcode : 修改新创建文件的默认注释"
 
 这里有很多文件，它们对应了不同类型不同语言的源文件，随便找一个，例如 `NSObjectObjective-C`:
 
-	//
-	//  ___FILENAME___
-	//  ___PROJECTNAME___
-	//
-	//  Created by ___FULLUSERNAME___ on ___DATE___.
-	//___COPYRIGHT___
+{% highlight objective-c %}
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//___COPYRIGHT___
 	
-	//#import "___FILEBASENAME___.h"
+//#import "___FILEBASENAME___.h"
 	
-	@implementation
-	___FILEBASENAMEASIDENTIFIER___
-	@end
+@implementation
+___FILEBASENAMEASIDENTIFIER___
+@end
+{% endhighlight %}
 
 类似 `___FILENAME___ ` 这样的东西大家已经很熟悉了(`__func__` 什么的)。
 
 我们随便改一改，加个金元帅什么的:
 
-	//
-	//  ___FILENAME___
-	//  ___PROJECTNAME___
-	//
-	//    ／￣￣￣Y￣￣。 ＼
-	//   l　　　　　　　　　l
-	//　ヽ,,,,,／ ￣￣￣￣ ヽﾉ
-	//　|::::: 　　　　　　　l
-	//　|:::　　 ＿_　　　　 |
-	//（6　　　＼●　     ●  丨
-	//　!　　　　  )・・(    ﾉ
-	//　ヽ 　 　　　(三)　  ﾉ
-	//　／＼　   　  二　ノ
-	// /⌒ヽ. ‘ー — 一 ＼
-	//l　　　 |👍🏻　　　ヽoヽ👍🏻
-	//
-	//  Created by ___FULLUSERNAME___ on ___DATE___.
-	//___COPYRIGHT___
+{% highlight objective-c %}
+//
+//  ___FILENAME___
+//  ___PROJECTNAME___
+//
+//    ／￣￣￣Y￣￣。 ＼
+//   l　　　　　　　　　l
+//　ヽ,,,,,／ ￣￣￣￣ ヽﾉ
+//　|::::: 　　　　　　　l
+//　|:::　　 ＿_　　　　 |
+//（6　　　＼●　     ●  丨
+//　!　　　　  )・・(    ﾉ
+//　ヽ 　 　　　(三)　  ﾉ
+//　／＼　   　  二　ノ
+// /⌒ヽ. ‘ー — 一 ＼
+//l　　　 |👍🏻　　　ヽoヽ👍🏻
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//___COPYRIGHT___
 	
-	//#import "___FILEBASENAME___.h"
+//#import "___FILEBASENAME___.h"
 	
-	@implementation
-	___FILEBASENAMEASIDENTIFIER___
-	@end
+@implementation
+___FILEBASENAMEASIDENTIFIER___
+@end
+{% endhighlight %}
 
 好了，好人就做到这里，其他的都是同样的道理，大家自己发挥吧。
 

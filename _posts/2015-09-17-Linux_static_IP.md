@@ -11,18 +11,20 @@ summary: "Linux 配置 IP"
 	
 将其内容改为如下格式:
 
-	DEVICE=eth0
-	HWADDR=00:0C:29:A9:66:DB
-	TYPE=Ethernet
-	UUID=37b4ade3-c11e-43b0-95e1-b2fcd2c4d8c9
-	ONBOOT=yes
-	NM_CONTROLLED=yes
-	BOOTPROTO=static
-	IPADDR=192.168.1.2
-	NETMASK=255.255.255.0
-	GATEWAY=192.168.1.1
-	DNS1=61.139.2.69
-	DNS2=202.98.96.68
+{% highlight shell %}
+DEVICE=eth0
+HWADDR=00:0C:29:A9:66:DB
+TYPE=Ethernet
+UUID=37b4ade3-c11e-43b0-95e1-b2fcd2c4d8c9
+ONBOOT=yes
+NM_CONTROLLED=yes
+BOOTPROTO=static
+IPADDR=192.168.1.2
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+DNS1=61.139.2.69
+DNS2=202.98.96.68
+{% endhighlight %}
 
 下面我们来了解一下它们都有什么作用:
 
