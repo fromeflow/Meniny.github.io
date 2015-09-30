@@ -26,6 +26,8 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
 	/* border-collapse: collapse; */
 	border-spacing: 1;
+	border-width: 1px;
+	border-color: #839496;
 }
 
 
@@ -58,8 +60,8 @@ sub { vertical-align: sub; font-size: 0.85em; }
 
 code {
     font: 0.85em Monaco, Courier, Monospace;
-	board-height: 1px;
-	
+	border-width: 1px;
+	border-color: #839496;
 }
 
 blockquote {
