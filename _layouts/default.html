@@ -10,9 +10,26 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link href="/assets/css/style.css" rel="stylesheet" />
-<!--   <link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
-    <link href="/assets/css/colors-light.css" rel="stylesheet" />
+	<link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/colors-light.css" rel="stylesheet" id="changecss"/>
+	<link href="/assets/css/colors-dark.css" rel="stylesheet" />
+	
+	<script language="javascript">
+        function getCss(flag){
+            document.getElementById('changecss').href = '/assets/css/' + flag;
+        }
+        
+        function change(num){
+            var flag = '';
+            switch(num){
+                case 1:flag = "colors-light.css";break;
+                case 2:flag = "colors-dark.css";break;
+                default:flag = "colors-light.css";break;
+            }
+
+            getCss(flag);
+        }
+		</script>
 
 </head>
 
@@ -50,8 +67,11 @@
       {{ content }}
     </div>
 
-
-
+	<div id="modechanger">
+		<input type="button" width="50" onclick="change(1);" />
+		<input type="button" width="50" onclick="change(2);" />
+	</div>
+		
   </div>
 
 
