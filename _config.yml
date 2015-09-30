@@ -1,31 +1,34 @@
-# Site settings
-title: "Meniny"
-email: Meniny@qq.com
-description: "Meniny's Blog."
-baseurl: ""
-url: "http://www.meniny.cn/"
-title_description: "Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave."
-title_image: "http://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
-#google_analytics: "UA-20365477-4"
-#disqus_account: cartenoire
-github_repository: https://github.com/Meniny
-#addthis_id: ra-513c6fa83da6ec67
-post_limit: 5
+title:            Meniny
+description:      This is my very own blog which shares skills.
+url:              http://www.meniny.cn/
+paginate:         10
 
-# Social usernames/URLs
-twitter_username: _Meniny
-github_username:  Meniny
-#linkedin_link: http://carte-noire.jacobtomlinson.co.uk/
-#google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
-#stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
+pygments:         true
+permalink:        pretty
+markdown:         rdiscount
+rdiscount:
+  extensions:     [smart]
 
-# Footer
-footer_left: "Powered by <a href=\"https://twitter.com/_Meniny\">Meniny</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/Meniny\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+# Theme specific settings
+theme:            b
+#signoff:          Mu-An
+#facebook_appid:   
+#google_analytics: 
+#disqus_shortname: 
 
-# Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-permalink: pretty
-exclude: [vendor]
+owner:
+  name:           Meniny
+  avatar:         'http://images.apple.com/support/assets/images/home/2015/imac_2x.png'
+  bio:            'Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.'
+
+links: 
+  - name:         Home
+    url:          /
+  - name:         Categories
+    url:          /categories
+  - name:         About
+    url:          /about
+  - name:         Email
+    url:          Meniny:._.@qq.com
+  - name:         GitHub
+    url:          http://github.com/Meniny

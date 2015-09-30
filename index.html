@@ -2,47 +2,26 @@
 layout: default
 ---
 
-
-<div class="container-fluid index">
-    <div class="row">
-
-        <div class="col-md-12 main content-panel">
-
-            <div class="gravatar">
-                <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
-            </div>
-
-            <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
-
-            <div class="author-text">
-                {{ site.title_description }}
-            </div>
-
-            {% include social_links.html %}
-          </div>
-          <div class="col-md-12 main content-panel">
-
-            <div class="articles">
-
-              <h2>Latest Articles</h2>
-
-              <ul>
-                  {% for post in site.posts | limit: site.post_limit %}
-
-                      <li>
-                          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                          <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
-                      </li>
-
-                  {% endfor %}
-                  <li>
-                      <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
-                  </li>
-              </ul>
-
-            </div>
-
-        </div>
-
-    </div>
-</div>
+<ul class="posts">
+  {% for post in paginator.posts %}
+    <li>
+      <a href="{{ post.url }}">
+        <h2>{{ post.title }}</h2>
+        <time>{{ post.date | date_to_string }}</time>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% unless paginator.total_pages == 1 %}
+<section class="pagination">
+  <a href="/{{ paginator.previous_page_path }}" class="previous-page{% unless paginator.previous_page %} invisible{% endunless %}">Previous</a>
+  {{ paginator.page }} of {{ paginator.total_pages }}
+  <a href="/{{ paginator.next_page_path }}" class="next-page{% unless paginator.next_page %} invisible{% endunless %}">Next</a>
+</section>
+{% endunless %}
+<aside>
+  <img src="{{ site.owner.avatar }}" alt="{{ site.owner.name }}" class="avatar" />
+  <strong>{{ site.owner.name }}</strong>
+  <p>{{ site.owner.bio }}</p>
+</aside>
+<div style="display:none;"><script src="http://s11.cnzz.com/z_stat.php?id=1256330294&web_id=1256330294" language="JavaScript"></script></div>
