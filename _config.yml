@@ -18,16 +18,16 @@ disqus_shortname:
 
 owner:
   name:           Meniny
-  avatar:         'https://secure.gravatar.com/avatar/afd3cc3e385d754183336c859d9e694a?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png'
+  avatar:         'http://images.apple.com/support/assets/images/home/2015/imac_2x.png'
   bio:            'Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.'
 
 links: 
   - name:         Home
     url:          /
   - name:         Categories
-    url:          /categories.html
+    url:          /categories
   - name:         About
-    url:          /about.html
+    url:          /about
   - name:         Email
     url:          Meniny@qq.com
   - name:         GitHub
