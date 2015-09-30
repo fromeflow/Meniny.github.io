@@ -24,8 +24,8 @@ blockquote:before, blockquote:after, q:before, q:after {
 	content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+	/* border-collapse: collapse; */
+	border-spacing: 1;
 }
 
 
@@ -58,13 +58,15 @@ sub { vertical-align: sub; font-size: 0.85em; }
 
 code {
     font: 0.85em Monaco, Courier, Monospace;
+	board-height: 1px;
+	
 }
 
 blockquote {
     margin: 22px 22px;
     padding: 0 20px;
     border-left: 2px solid #000000;
-    font-size: 1.2em;
+    font-size: 13px;
     /* font-style: italic; */
     line-height: 1.5em;
 }
