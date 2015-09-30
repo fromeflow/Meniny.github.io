@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.title }} - {{ site.title }} - {{ site.author }}({{ site.email }})">
+    <title>
+		{{ page.title }} - {{ site.title }}
+	</title>
+
+    <link href="/css/styles.css">
+    <link href="/css/github-dark.css">
+    <script src="/js/scale.fix.js"></script>
+	<script src="/js/jquery-1.11.0.js"> </script>
+    <script src="/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="without-description">
+        <h1>{{ site.title }}</h1>
+        <p></p>
+        <p class="view"><a href="http://www.meniny.cn/">{{ site.title }} <small>{{ site.description }}</small></a></p>
+        <ul>
+          <li><a href="/categories.html">View the <strong>Categories</strong></a></li>
+          <li><a href="/faqs.html">View the <strong>FAQs</strong></a></li>
+          <li><a href="/about.html">View the <strong>Info</strong></a></li>
+        </ul>
+      </header>
+<!--     </div> -->
+
+<!--   <div class="container"> -->
+     <div class="row">
+
+        <div class="col-md-8">
+          {{ content }}
+		  </div>
+	  </div>
+<!-- 	  	</div> -->
+	</section>
+	</div>
+	
+    <footer>
+      <p>Powered By <a href="http://www.meniny.cn/">Meniny</a></p>
+      <p>Hosted on GitHub &mdash; <a href="https://github.com/Meniny">Meniny on Github</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
