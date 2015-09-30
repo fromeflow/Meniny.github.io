@@ -2,7 +2,8 @@ markdown: rdiscount #redcarpet
 permalink: /:categories/:title.html
 baseurl: /
 lsi: false
-pygments: true
+#pygments: true
+highlighter: pygments
 safe: true
 auto: false 
 
