@@ -1,24 +1,9 @@
-markdown: redcarpet
-permalink: /:categories/:title.html
-baseurl: /
-lsi: false
-#pygments: true
-highlighter: pygments
-safe: true
-auto: false 
-
-paginate: 8
-paginate_path: "page:num"
-
-# presonal config
-domain: meniny.cn
-title: Meniny's Blog
+name: Meniny
+url: http://www.meniny.cn/
 description: This is my very own Blog which shares skills. I hope you like it.
-author: Meniny
-email: meniny@qq.com
-github: Meniny
 
-config:
-  js_dir:
-  img_dir:
-  css_dir:
+permalink: /:year/:month/:day/:title/
+paginate: 10
+highlighter: pygments
+
+exclude: ['Gemfile.lock', 'Gemfile', 'Rakefile']

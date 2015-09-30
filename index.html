@@ -1,43 +1,49 @@
 ---
 layout: default
-title: "Home"
+title: Solar Theme
 ---
-<!-- Loop output paged posts -->
+
 {% for post in paginator.posts %}
-<h2>
-  <a href="{{ post.url }}">
-    {{ post.title }}
-  </a> 
-  <div class="post-date">
-	<span class="glyphicon glyphicon-time"></span>
-	{{ post.date | date_to_string }}
-  </div>
-</h2>
-<hr>
-{{ post.excerpt }}
-	<p> <a href="{{ post.url }}"><span >Detail &raquo; </span></a></p>
-<hr>
+
+	<article class="post">
+
+		{% if post.external-url %}
+			<h1>
+				<a href="{{ post.external-url }}">{{ post.title }}</a>
+				<a class="anchor" href="{{ post.url }}"><i class="icon-anchor"></i></a>
+			</h1>
+		{% else %}
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+		{% endif %}
+
+		<div class="post-content">{{ post.content }}</div>
+
+	</article>
+
 {% endfor %}
 
-<!-- Pager indicator -->
-<ul class="pager">
-  {% if paginator.previous_page %} {% if paginator.previous_page == 1 %}
-  <li class="previous">
-    <a href="{{ site.url }}/">
-      &larr; Newer
-    </a>
-  </li>
-  {% else %}
-  <li class="previous">
-    <a href="{{ site.url }}/page{{ paginator.previous_page }}">
-      &larr; Newer
-    </a>
-  </li>
-  {% endif %} {% endif %} {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ site.url }}/page{{ paginator.next_page }}">
-      Older &rarr;
-    </a>
-  </li>
-  {% endif %}
-</ul>
+
+
+{% if paginator.total_pages > 1 %}
+	<div class="postnavigation">
+
+		{% if paginator.previous_page %}
+			{% if paginator.page == 2 %}
+				<a class="prev left" href="/">&larr; Newer</a>
+			{% else %}
+				<a class="prev left" href="/page{{paginator.previous_page}}/">&larr; Newer</a>
+			{% endif %}
+		{% else %}
+			<span class="nope left">&larr; Newer</span>
+		{% endif %}
+
+		<span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+		{% if paginator.next_page %}
+			<a class="next right" href="/page{{paginator.next_page}}/">Older &rarr;</a>
+		{% else %}
+			<span class="nope right">Older &rarr;</span>
+		{% endif %}
+
+	</div>
+{% endif %}
