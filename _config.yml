@@ -1,4 +1,4 @@
-markdown: rdiscount #redcarpet
+markdown: redcarpet
 permalink: /:categories/:title.html
 baseurl: /
 lsi: false
