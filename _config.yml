@@ -25,9 +25,9 @@ links:
   - name:         Home
     url:          /
   - name:         Categories
-    url:          /categories
+    url:          /categories.html
   - name:         About
-    url:          /about
+    url:          /about.html
   - name:         Email
     url:          Meniny@qq.com
   - name:         GitHub
