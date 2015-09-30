@@ -9,26 +9,38 @@ summary: "Mac: 终端关机重启"
 
 * 立即关机
 
-		sudo halt
-
+{% highlight console %}
+sudo halt
+{% endhighlight %}
 
 * 立即关机
 
-		sudo shutdown -h now
+{% highlight console %}
+sudo shutdown -h now
+{% endhighlight %}
 
 * 某段时间后关机(这里是十分钟)
 
-		sudo shutdown -h +10
+{% highlight console %}
+sudo shutdown -h +10
+{% endhighlight %}
 
 * 某个时间点关机(这里是20:00)
 
-		sudo shutdown -h 20:00
+{% highlight console %}
+sudo shutdown -h 20:00
+{% endhighlight %}
 
 * 立即重启
 
-		sudo reboot 
+{% highlight console %}
+sudo reboot 
+{% endhighlight %}
 		
 * 立即重启
 
-		sudo shutdown -r now
+{% highlight console %}
+sudo shutdown -r now
+{% endhighlight %}
+
 
