@@ -35,17 +35,20 @@ category: "ios"
 
 按照你自己的意愿创建控件并布局后，接下来要实现的是基本的输入和删除功能，这需要在 [textDocumentProxy](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIInputViewController_Class/index.html#//apple_ref/occ/instp/UIInputViewController/textDocumentProxy) 中调用 [UIKeyInput](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIKeyInput_Protocol/index.html#//apple_ref/occ/intf/UIKeyInput) 协议中的 [insertText](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIKeyInput_Protocol/index.html#//apple_ref/occ/intfm/UIKeyInput/insertText:) 和 [deleteBackward](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIKeyInput_Protocol/index.html#//apple_ref/occ/intfm/UIKeyInput/deleteBackward) 方法，其中 `textDocumentProxy` 代表了当前文本输入对象，符合 [UITextDocumentProxy 协议](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITextDocumentProxy_Protocol/index.html#//apple_ref/occ/intf/UITextDocumentProxy)。
 
-{% highlight ruby %}
-	let proxy = textDocumentProxy as UITextDocumentProxy
-{% endhighlight %}
+```c
+let proxy = textDocumentProxy as UITextDocumentProxy
+```
 
 * 如果需要输入:
 
-		proxy.insertText("Meniny")
-
+```c
+proxy.insertText("Meniny")
+```
 * 如果需要删除:  
 
-		proxy.deleteBackward()
+```c
+proxy.deleteBackward()
+```
 
 ### 删除内容的控制
 
@@ -65,7 +68,9 @@ category: "ios"
 
 你一定见过一些输入法例如百度输入法、搜狗输入法等支持在部分应用中执行换行操作，事实上这个功能的实现也很简单，只需要插入一个回车(此处代码接上文):
 
+```c
 	proxy.insertText("\r")
+```
 
 ### 输入对象内容变化的响应
 
