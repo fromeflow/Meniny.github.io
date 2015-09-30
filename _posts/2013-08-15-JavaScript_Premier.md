@@ -38,15 +38,17 @@ JavaScript使用document.write来输出内容。将会输出在网页上输出�
 
 有些浏览器可能不支持JavaScript，我们可以使用如下的方法对它们隐藏JavaScript代码。
 
-	<html>
-	 <body>
-	 <script type="text/JavaScript">
-	 <!--
-	 document.write("我是菜鸟我怕谁!");
-	 //-->
-	 </script>
-	 </body>
-	</html>
+ {% highlight html %}
+<html>
+	<body>
+		<script type="text/JavaScript">
+			<!--
+			document.write("我是菜鸟我怕谁!");
+			//-->
+		</script>
+	</body>
+</html>
+{% endhighlight %}
 	
 `<!-- -->`里的内容对于不支持JavaScript的浏览器来说就等同于一段注释，而对于支持JavaScript的浏览器，这段代码仍然会执行。至于`//`符号则是JavaScript里的注释符号，在这里添加它是为了防止JavaScript试图执行`-->`。不过通常情况下，现在的浏览器几乎都支持JavaScript，即使是不支持的，也会了解如何合理地处理含有JavaScript的网页。
 
@@ -57,13 +59,13 @@ JavaScript脚本可以放在网页的head里或者body部分，而且效果也�
 #####(1)放在body部分的JavaScript脚本在网页读取到该语句的时候就会执行，例如：
 
 	<html>
-	<body>
-	<script type="text/JavaScript">
-	<!--
-	document.write("我是菜鸟我怕谁!");
-	//-->
-	</script>
-	</body>
+		<body>
+			<script type="text/JavaScript">
+				<!--
+				document.write("我是菜鸟我怕谁!");
+				//-->
+			</script>
+		</body>
 	
 #####(2)在head部分的脚本在被调用的时候才会执行，例如：
 
