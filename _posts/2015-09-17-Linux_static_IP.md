@@ -11,7 +11,7 @@ summary: "Linux 配置 IP"
 	
 将其内容改为如下格式:
 
-{% highlight shell %}
+{% highlight sh %}
 DEVICE=eth0
 HWADDR=00:0C:29:A9:66:DB
 TYPE=Ethernet

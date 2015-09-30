@@ -15,7 +15,7 @@ Linux的启动其实和windows的启动过程很类似，不过windows我们是�
 
 > `init` 进程是系统所有进程的起点，您可以把它比拟成系统所有进程的老祖宗，没有这个进程，系统中任何进程都不会启动。`init` 最主要的功能就是准备软件执行的环境，包括系统的主机名、网络设定、语言、文件系统格式及其他服务的启动等。 而所有的动作都会通过 init的配置文件`/etc/inittab`来规划，而`inittab` 内还有一个很重要的设定内容，那就是默认的 `runlevel` (开机运行级别)。先来看看运行级别Run level,Linux就是通过设定run level来规定系统使用不同的服务来启动，让Linux的使用环境不同。我们来看看这个`inittab`文件里面的支持级别。
 
-{% highlight shell %}
+{% highlight sh %}
 # inittab is only used by upstart for the default runlevel.
 #
 # ADDING OTHER CONFIGURATION HERE WILL HAVE NO EFFECT ON YOUR SYSTEM.
