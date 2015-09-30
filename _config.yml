@@ -1,31 +1,23 @@
-# Site settings
-title: "Meniny"
-email: Meniny@qq.com
-description: "Meniny's Blog."
-baseurl: ""
-url: "http://www.meniny.cn/"
-title_description: "Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave."
-title_image: "http://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
-#google_analytics: "UA-20365477-4"
-#disqus_account: cartenoire
-github_repository: https://github.com/Meniny
-#addthis_id: ra-513c6fa83da6ec67
-post_limit: 5
-
-# Social usernames/URLs
-twitter_username: _Meniny
-github_username:  Meniny
-#linkedin_link: http://carte-noire.jacobtomlinson.co.uk/
-#google_plus_link: http://carte-noire.jacobtomlinson.co.uk/
-#stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
-
-# Footer
-footer_left: "Powered by <a href=\"https://twitter.com/_Meniny\">Meniny</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/Meniny\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
-
-# Build settings
 markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-permalink: pretty
-exclude: [vendor]
+permalink: /:categories/:title.html
+baseurl: /
+lsi: false
+pygments: true
+safe: true
+auto: false 
+
+paginate: 8
+paginate_path: "page:num"
+
+# presonal config
+domain: meniny.cn
+title: Meniny's Blog
+description: This is my very own Blog which shares skills. I hope you like it.
+author: Meniny
+email: meniny#qq.com
+github: Meniny
+
+config:
+  js_dir:
+  img_dir:
+  css_dir:
