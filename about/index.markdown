@@ -3,9 +3,22 @@ layout: default
 title: About
 ---
 
-This is where you would but a short bio, and/or a description of your site. It also serves as an example of how to set up a standalone page. For example:
+#### Basic Info
+Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.
 
-<img src="/images/shakespeare.png" class="right" />
-**William Shakespeare** (26 April 1564 – 23 April 1616) was an English poet and playwright, widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet and the "Bard of Avon". His extant works, including some collaborations, consist of about 38 plays, 154 sonnets, two long narrative poems, and a few other verses, the authorship of some of which is uncertain. His plays have been translated into every major living language and are performed more often than those of any other playwright.
+#### Links
+App Store: [Shenyi Li on App Store](https://itunes.apple.com/cn/developer/shenyi-li/id1026495349)  
+GitHub: <https://github.com/Meniny>  
+Twitter: <http://twitter.com/_Meniny>  
+Weibo: <http://weibo.com/Meniny>  
+E-mail: <Meniny@qq.com>  
+Tencent QQ: 8382453
 
-Shakespeare was born and brought up in Stratford-upon-Avon. At the age of 18, he married Anne Hathaway—no, not *that* Anne Hathaway—with whom he had three children.
+#### Live Life
+
+> Sometimes, you end up losing yourself trying to hold onto someone who doesn't care about losing you. Then you realize how alone you are and that is actually one of the worst feelings ever. You hate it when you can't stop thinking about that one person, and deep down inside, you doubt they r actually thinking about you. you pretend that everything's alright, smile like nothing is wrong, talk like your life is perfect, act like it's all a dream and not hurting you cause when everybody else thinks ur fine, sometimes you forget for a while that ur not.
+> 
+> You've lived, you've loved, you've lost, you've missed, you've hurt, you've trusted, you've made mistakes, the thing is, most of all, you've learned.
+
+
+
