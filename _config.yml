@@ -11,10 +11,10 @@ rdiscount:
 
 # Theme specific settings
 theme:            b
-signoff:          Meniny
-facebook_appid:   
-google_analytics: 
-disqus_shortname: 
+signoff:          Mu-An
+#facebook_appid:   
+#google_analytics: 
+#disqus_shortname: 
 
 owner:
   name:           Meniny
