@@ -1,4 +1,4 @@
-markdown: redcarpet
+markdown: rdiscount #redcarpet
 permalink: /:categories/:title.html
 baseurl: /
 lsi: false
@@ -14,7 +14,7 @@ domain: meniny.cn
 title: Meniny's Blog
 description: This is my very own Blog which shares skills. I hope you like it.
 author: Meniny
-email: meniny#qq.com
+email: meniny@qq.com
 github: Meniny
 
 config:
