@@ -3,10 +3,10 @@ layout: default
 title: About
 ---
 
-#### Basic Info
+### Basic Info
 Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.
 
-#### Links
+### Links
 App Store: [Shenyi Li on App Store](https://itunes.apple.com/cn/developer/shenyi-li/id1026495349)  
 GitHub: <https://github.com/Meniny>  
 Twitter: <http://twitter.com/_Meniny>  
@@ -14,7 +14,7 @@ Weibo: <http://weibo.com/Meniny>
 E-mail: <Meniny@qq.com>  
 Tencent QQ: 8382453
 
-#### Live Life
+### Live Life
 
 > Sometimes, you end up losing yourself trying to hold onto someone who doesn't care about losing you. Then you realize how alone you are and that is actually one of the worst feelings ever. You hate it when you can't stop thinking about that one person, and deep down inside, you doubt they r actually thinking about you. you pretend that everything's alright, smile like nothing is wrong, talk like your life is perfect, act like it's all a dream and not hurting you cause when everybody else thinks ur fine, sometimes you forget for a while that ur not.
 > 
