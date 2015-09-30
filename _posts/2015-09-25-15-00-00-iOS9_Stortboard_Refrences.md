@@ -5,7 +5,7 @@ title:  "iOS 9 适配之 StoryBoard Refrences"
 tags: [iOS,StoryBoard Refrences,StoryBoard]
 summary: "iOS 9 适配之 StoryBoard Refrences"
 ---
-除了前面 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/ios/23-08-00-iOS9_URLScheme.html)、[***Bitcode***](http://www.meniny.cn/ios/23-07-00-iOS9_Bitcode.html)、[***ATS***](http://www.meniny.cn/ios/23-06-00-iOS9_ATS.html) 和 [***后台定位***](http://www.meniny.cn/ios/2015-09-18-23-09-00-iOS9_Location.html) 之外，iOS 9 还对另外一个常用的工具——`StoryBoard` 做了一些改进。
+除了前面 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/2015/09/18/23-08-00-iOS9_URLScheme/)、[***Bitcode***](http://www.meniny.cn/2015/09/18/23-07-00-iOS9_Bitcode/)、[***ATS***](http://www.meniny.cn/2015/09/18/23-06-00-iOS9_ATS/) 和 [***后台定位***](http://www.meniny.cn/2015/09/25/14-00-00-iOS9_Location/) 之外，iOS 9 还对另外一个常用的工具——`StoryBoard` 做了一些改进。
 
 在 iOS 9 之前，苹果虽然大力推广 `StoryBoard`，但在实际使用过程中还是有不少的坑。从 iOS 9 开始，苹果引入了 `StoryBoard Refrences` 概念为我们填坑，希望 `StoryBoard` 能扮演更重要的角色。
 

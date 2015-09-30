@@ -17,7 +17,7 @@ category: "ios"
 
 首先在 Xcode 中创建一个工程，然后依次选择菜单 `File` => `New` => `Target...` 来新建一个 `Target`，并在新建面板中选择 `iOS` => `Application Extension` => `Custom Keyboard`。
 
-![流程](http://www.cocoachina.com/cms/uploads/allimg/140918/4196_140918180022_1.png)
+![流程](http://img.blog.csdn.net/20150930223653228?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
 
 ### 输入法间的切换
 
