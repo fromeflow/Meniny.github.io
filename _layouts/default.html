@@ -18,10 +18,11 @@
         
         function change(){
 			var curmode = document.getElementById('changecss').href;
-			if (curmode == '/assets/css/colors-light.css') {
-				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
-			} else {
+			var lightmode = '/assets/css/colors-light.css';
+			if(curmode!==lightmode){
 				document.getElementById('changecss').href = '/assets/css/colors-light.css';
+			}else{
+				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
 			}
         }
 		
