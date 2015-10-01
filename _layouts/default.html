@@ -26,16 +26,14 @@
                 case 2:flag = "colors-dark.css";break;
                 default:flag = "colors-light.css";break;
             }
-
             getCss(flag);
         }
 		
 		function modechange(){
-			var a= new Date();
-			var hour=a.getHours();
+			var today= new Date();
+			var hour=today.getHours();
 			if(hour>12&&hour<19){
 				change(1);
-			
 			}else{
 				change(2);
 			}
