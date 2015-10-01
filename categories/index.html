@@ -21,7 +21,15 @@ title: Categories
 				{% if cat[0] == 'unix' %} 
 					<h2><div>UNIX [{{ cat[1].size }}]<div></h2>
 				{% else %}
-					<h2><div style="text-transform:capitalize;">{{ cat[0] }} [{{ cat[1].size }}]<div></h2>
+					{% if cat[0] == 'php' %} 
+					<h2><div>PHP [{{ cat[1].size }}]<div></h2>
+					{% else %}
+						{% if cat[0] == 'j2ee' %} 
+						<h2><div>Java EE [{{ cat[1].size }}]<div></h2>
+						{% else %}
+						<h2><div style="text-transform:capitalize;">{{ cat[0] }} [{{ cat[1].size }}]<div></h2>
+						{% endif %} 
+					{% endif %} 
 				{% endif %} 
 			{% endif %} 
 		{% endif %} 
