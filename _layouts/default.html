@@ -10,20 +10,20 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-	<link href="/assets/css/style.css" rel="stylesheet"/>
-    <link href="" rel="stylesheet" id="changecss"/>
+	<link href="/assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" id="changecss"/>
 <!-- 	<link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
 	
-	<script language="javascript">
-		dark='0';
-        function change(){
-			if(dark.equals('0')){
-				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
-				dark='1';
-			}else{
-				document.getElementById('changecss').href = '/assets/css/colors-light.css';
-				dark='0';
-			}
+<script language="javascript">
+        
+        function change(num){
+			var flag = '';
+            switch(num){
+                case 1:flag = "colors-light.css";break;
+                case 2:flag = "colors-dark.css";break;
+                default:flag = "colors-light.css";break;
+            }
+            document.getElementById('changecss').href = '/assets/css/' + flag;
         }
 		
 		function modechange(){
@@ -67,7 +67,8 @@
           <li><a href="/about">About</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
 		  <li> </li>
-		  <li><a href="javascript:change();">[Display Mode]</a></li>
+		  <li><a href="javascript:change(1);">[Light]</a></li>
+		  <li><a href="javascript:change(2);">[Dark]</a></li>
         </ul>
       </nav>
     </div>
