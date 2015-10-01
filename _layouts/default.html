@@ -18,8 +18,8 @@
         
         function change(){
 			var curmode = document.getElementById('changecss').href;
-			var lightmode = '/assets/css/colors-light.css';
-			if(curmode!==lightmode){
+			var darkmode = '/assets/css/colors-dark.css';
+			if(curmode.equals(darkmode)){
 				document.getElementById('changecss').href = '/assets/css/colors-light.css';
 			}else{
 				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
@@ -67,7 +67,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
 		  <li> </li>
-		  <li><a href="javascript:change();">[Swap Mode]</a></li>
+		  <li><a href="javascript:change();">[Display Mode]</a></li>
         </ul>
       </nav>
     </div>
