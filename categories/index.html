@@ -14,10 +14,16 @@ title: Categories
 		
 		{% if cat[0] == 'ios' %} 
 			<h2><div>iOS [{{ cat[1].size }}]<div></h2>
-		{% elseif cat[0] == 'mfc' %} 
-			<h2><div>MFC [{{ cat[1].size }}]<div></h2>
-		{% elseif cat[0] == 'unix' %} 
-			<h2><div>UNIX [{{ cat[1].size }}]<div></h2>
+		{% else %}
+			{% if cat[0] == 'mfc' %} 
+				<h2><div>MFC [{{ cat[1].size }}]<div></h2>
+			{% else %}
+				{% if cat[0] == 'unix' %} 
+				<h2><div>UNIX [{{ cat[1].size }}]<div></h2>
+				{% else %}
+				<h2><div>{{ cat[0] }} [{{ cat[1].size }}]<div></h2>
+				{% endif %} 
+			{% endif %} 
 		{% endif %} 
 				 
 		{% for post in cat[1] %} 
