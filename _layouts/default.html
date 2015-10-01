@@ -32,7 +32,7 @@
 		function modechange(){
 			var today= new Date();
 			var hour=today.getHours();
-			if(hour>24){
+			if(hour>12&&hour<19){
 				document.getElementById('changecss').href = '/assets/css/colors-light.css';
 			}else{
 				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
