@@ -21,7 +21,7 @@
 			icon = '';
             switch(num){
                 case 1:flag = "colors-light.css";icon = 'sun';break;
-                case 2:flag = "colors-dark.css";icon = 'cloud';break;
+                case 2:flag = "colors-dark.css";icon = 'moon';break;
                 default:flag = "colors-light.css";icon = 'sun';break;
             }
             document.getElementById('changecss').href = '/assets/css/' + flag;
@@ -36,7 +36,7 @@
 				document.getElementById('titleicon').class = 'icon-sun';
 			}else{
 				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
-				document.getElementById('titleicon').class = 'icon-cloud';
+				document.getElementById('titleicon').class = 'icon-moon';
 			}
 		}
 		
