@@ -15,18 +15,24 @@
 <!-- 	<link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
 	
 	<script language="javascript">
-        function getCss(flag){
+        <!-- function getCss(flag){
             document.getElementById('changecss').href = '/assets/css/' + flag;
-        }
+        } -->
         
-        function change(num){
-            var flag = '';
+        function change(){
+			if (document.getElementById('changecss').href == '/assets/css/colors-light.css') {
+				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
+			} else {
+				document.getElementById('changecss').href = '/assets/css/colors-light.css';
+			}
+			
+            <!-- var flag = '';
             switch(num){
                 case 1:flag = "colors-light.css";break;
                 case 2:flag = "colors-dark.css";break;
                 default:flag = "colors-light.css";break;
             }
-            getCss(flag);
+            getCss(flag); -->
         }
 		
 		function modechange(){
