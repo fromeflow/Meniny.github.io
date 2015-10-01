@@ -10,14 +10,15 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-	<link href="/assets/css/style.css" rel="stylesheet" />
+	<link href="/assets/css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" id="changecss"/>
 <!-- 	<link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
 	
 <script language="javascript">
         
         function change(){
-			if (document.getElementById('changecss').href == '/assets/css/colors-light.css') {
+			var curmode = document.getElementById('changecss').href;
+			if (curmode == '/assets/css/colors-light.css') {
 				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
 			} else {
 				document.getElementById('changecss').href = '/assets/css/colors-light.css';
@@ -65,7 +66,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
 		  <li> </li>
-		  <li><a href="javascript:change();">[Change Mode]</a></li>
+		  <li><a href="javascript:change();">[Swap Mode]</a></li>
         </ul>
       </nav>
     </div>
