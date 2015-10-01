@@ -29,13 +29,23 @@
 
             getCss(flag);
         }
-		</script>
+		
+		function modechange(){
+			var a= new Date();
+			var hour=a.getHours();
+			if(hour>7&&hour<19){
+				change(1);
+			
+			}else{
+				change(2);
+			}
+		}
+		
+	</script>
 
 </head>
 
-<body>
-
-
+<body onload="modechange()">
 
   <header id="header">
     <h1><a href="/"><i class="icon-sun"></i> {{ site.name }}</a></h1>
