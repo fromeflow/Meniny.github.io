@@ -17,30 +17,22 @@
 <script language="javascript">
         
         function change(num){
-			window.flag = '';
+			flag = '';
             switch(num){
-                case 1:window.flag = "colors-light.css";break;
-                case 2:window.flag = "colors-dark.css";break;
-                default:window.flag = "colors-light.css";break;
+                case 1:flag = "colors-light.css";break;
+                case 2:flag = "colors-dark.css";break;
+                default:flag = "colors-light.css";break;
             }
-            document.getElementById('changecss').href = '/assets/css/' + window.flag;
+            document.getElementById('changecss').href = '/assets/css/' + flag;
         }
 		
 		function modechange(){
 			var today= new Date();
 			var hour=today.getHours();
 			if(hour>7&&hour<19){
-				if (window.flag.equals('colors-light.css')) {
-					document.getElementById('changecss').href = '/assets/css/colors-light.css';
-				} else {
-					document.getElementById('changecss').href = '/assets/css/colors-dark.css';
-				}
+				document.getElementById('changecss').href = '/assets/css/colors-light.css';
 			}else{
-				if (window.flag.equals('colors-dark.css')) {
-					document.getElementById('changecss').href = '/assets/css/colors-dark.css';
-				} else {
-					document.getElementById('changecss').href = '/assets/css/colors-light.css';
-				}
+				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
 			}
 		}
 		
