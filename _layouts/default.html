@@ -33,9 +33,9 @@
 			var today= new Date();
 			var hour=today.getHours();
 			if(hour>24){
-				change(1);
+				document.getElementById('changecss').href = '/assets/css/colors-light.css';
 			}else{
-				change(2);
+				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
 			}
 		}
 		
