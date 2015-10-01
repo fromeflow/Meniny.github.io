@@ -7,13 +7,25 @@ title: Categories
 	<h1>Total Count:{{ site.posts.size }}</h1>
 	
 	{% for cat in site.categories %} 
+	
 	{% if cat[0] != 'blog' %} 
-	   <a name="{{ cat[0] }}"></a>
-   <h2><div style="text-transform:capitalize;">{{ cat[0] }} [{{ cat[1].size }}]<div></h2>
-     {% for post in cat[1] %} 
-    <li><h4><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></h4></li>
+	
+		<a name="{{ cat[0] }}"></a>
+		
+		{% if cat[0] == 'ios' %} 
+			<h2><div>iOS [{{ cat[1].size }}]<div></h2>
+		{% elseif cat[0] == 'mfc' %} 
+			<h2><div>MFC [{{ cat[1].size }}]<div></h2>
+		{% elseif cat[0] == 'unix' %} 
+			<h2><div>UNIX [{{ cat[1].size }}]<div></h2>
+		{% endif %} 
+				 
+		{% for post in cat[1] %} 
+			<li><h4><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></h4></li>
+		{% endfor %} 
+	
+	{% endif %} 
+	
 	{% endfor %} 
-   {% endif %} 
-   {% endfor %} 
 
 </div>
