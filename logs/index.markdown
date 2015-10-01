@@ -23,8 +23,6 @@ title: Logs
 * `2015-10-01`: Add the `'Night Mode'`
 
 
-<hr>
-
 {% include comment.html %} 
 
 
