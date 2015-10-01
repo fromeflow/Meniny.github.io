@@ -2,6 +2,7 @@
 layout: post
 title: "iOS : Custom Keyboard"
 category: "ios"
+tags: [iOS]
 ---
 从 iOS 8 开始苹果允许开发者创造自己的第三方输入法，最近有些朋友问我关于第三方输入法开发的问题，所以也就有了这篇博客。
 
