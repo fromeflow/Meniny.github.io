@@ -4,7 +4,8 @@ title: Categories
 ---
 
 <div id="blog-categories">
-
+	<h1>Total Count:{{ site.posts.size }}</h1>
+	
 	{% for cat in site.categories %} 
 	{% if cat[0] != 'blog' %} 
    <a name="{{ cat[0] }}"></a>
