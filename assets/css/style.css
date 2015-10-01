@@ -282,7 +282,7 @@ img.center {
 }
  
 .icon-sun:before { content: '\e801'; }
-.icon-moon:before { content: '\e802'; }
+.icon-moon:before { content: '\e800'; }
 .icon-anchor:before { content: '\e800'; }
 .icon-anchor {
 	font-size: 65%;
