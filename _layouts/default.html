@@ -18,12 +18,14 @@
         
         function change(num){
 			flag = '';
+			icon = '';
             switch(num){
-                case 1:flag = "colors-light.css";break;
-                case 2:flag = "colors-dark.css";break;
-                default:flag = "colors-light.css";break;
+                case 1:flag = "colors-light.css";icon = 'sun';break;
+                case 2:flag = "colors-dark.css";icon = 'cloud';break;
+                default:flag = "colors-light.css";icon = 'sun';break;
             }
             document.getElementById('changecss').href = '/assets/css/' + flag;
+			document.getElementById('titleicon').class = 'icon-' + icon;
         }
 		
 		function modechange(){
@@ -31,8 +33,10 @@
 			var hour=today.getHours();
 			if(hour>7&&hour<19){
 				document.getElementById('changecss').href = '/assets/css/colors-light.css';
+				document.getElementById('titleicon').class = 'icon-sun';
 			}else{
 				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
+				document.getElementById('titleicon').class = 'icon-cloud';
 			}
 		}
 		
@@ -45,7 +49,7 @@
 <body>
 
   <header id="header">
-    <h1><a href="/"><i class="icon-moon"></i> {{ site.name }}</a></h1>
+    <h1><a href="/"><i class="icon-cloud" id="titleicon"></i> {{ site.name }}</a></h1>
     <p>{{ site.description }}</p>
   </header>
 

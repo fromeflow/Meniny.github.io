@@ -283,6 +283,7 @@ img.center {
  
 .icon-sun:before { content: '\e801'; }
 .icon-moon:before { content: '\263e'; }
+.icon-cloud:before { content: '\fe0e'; }
 .icon-anchor:before { content: '\e800'; }
 .icon-anchor {
 	font-size: 65%;
