@@ -53,7 +53,7 @@ summary: "iOS UITableView: Appearance of HeaderView & FooterView for Section"
 {% endhighlight %}
   
 ***    
-###<center>Powered by Meniny</center>    
+<center>Powered by Meniny</center>    
 <center>Contact <Meniny@qq.com></center>    
     
   
