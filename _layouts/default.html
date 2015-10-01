@@ -15,13 +15,14 @@
 <!-- 	<link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
 	
 	<script language="javascript">
+		dark='0';
         function change(){
-			var curmode = document.getElementById('changecss').href;
-			var darkmode = '/assets/css/colors-dark.css';
-			if(curmode.equals(darkmode)){
-				document.getElementById('changecss').href = '/assets/css/colors-light.css';
-			}else{
+			if(dark.equals('0')){
 				document.getElementById('changecss').href = '/assets/css/colors-dark.css';
+				dark='1';
+			}else{
+				document.getElementById('changecss').href = '/assets/css/colors-light.css';
+				dark='0';
 			}
         }
 		
