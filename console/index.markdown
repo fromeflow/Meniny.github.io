@@ -2,7 +2,17 @@
 layout: default
 title: Logs
 ---
-# Logs of Meniny.cn
+# Console
+
+### Total Count
+
+Blogs: {{ site.posts.size }}
+
+Categories: {{ site.categories.size }}
+
+Tags: {{ site.tags.size }}
+
+### Logs
 
 * `2007-01-17`: Create this Blog
 
