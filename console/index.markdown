@@ -4,13 +4,9 @@ title: Logs
 ---
 # Console
 
-### Total Count
+### Total
 
-Blogs: {{ site.posts.size }}
-
-Categories: {{ site.categories.size }}
-
-Tags: {{ site.tags.size }}
+There are <strong>{{ site.posts.size }}</strong> blogs in <strong>{{ site.categories.size }}</strong> categories with <strong>{{ site.tags.size }}</strong> tags.
 
 ### Logs
 
