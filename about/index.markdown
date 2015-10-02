@@ -8,10 +8,10 @@ title: About
 Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.
 
 ### Links
-App Store: [Shenyi Li on App Store](https://itunes.apple.com/cn/developer/shenyi-li/id1026495349)  
-GitHub: <https://github.com/Meniny>  
-Twitter: <http://twitter.com/_Meniny>  
-Weibo: <http://weibo.com/Meniny>  
+App Store: [Shenyi Li on App Store](https://itunes.apple.com/cn/developer/shenyi-li/id1026495349){:target="_blank"}  
+GitHub: [https://github.com/Meniny](https://github.com/Meniny){:target="_blank"}  
+Twitter: [http://twitter.com/_Meniny](http://twitter.com/_Meniny){:target="_blank"}  
+Weibo: [http://weibo.com/Meniny](http://weibo.com/Meniny){:target="_blank"}  
 E-mail: <Meniny@qq.com>  
 Tencent QQ: 8382453
 
