@@ -2,7 +2,7 @@
 layout: default
 title: Logs
 ---
-### Logs of Meniny.cn
+# Logs of Meniny.cn
 
 * `2007-01-17`: Create this Blog
 

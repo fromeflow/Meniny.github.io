@@ -17,7 +17,7 @@ title: Archives
 			{% endif %}
 		</article>
 	{% endfor %} -->
-	<h1>Total Count:{{ site.posts.size }}</h1>
+	<h1>Archives</h1>
 	 {% for post in site.posts limit:100 %} 
 	 {% unless post.next %} 
     <h2>{{ post.date | date: '%Y' }}</h2> 

@@ -2,8 +2,9 @@
 layout: default
 title: About
 ---
+# About
 
-### Basic Info
+### Base
 Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.
 
 ### Links
