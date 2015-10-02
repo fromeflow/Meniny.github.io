@@ -12,13 +12,13 @@ title: Logs
 
 * `2012-06-01`: New domain `'meniny.name'`
 
-* `2014-12-27`: Change theme to `'Simple'`
+* `2014-12-27`: New theme `'Simple'`
 
 * `2015-08-25`: New domain `'meniny.cn'`
 
-* `2015-09-27`: Change theme to `'Darkness'`
+* `2015-09-27`: New theme `'Darkness'`
 
-* `2015-09-30`: Change theme to `'Meniny-Solar'`
+* `2015-09-30`: New theme `'Meniny'`
 
 * `2015-10-01`: Add the `'Night Mode'`
 

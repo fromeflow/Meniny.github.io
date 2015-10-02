@@ -11,7 +11,7 @@ layout: default
 	{% else %}
 		<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 	{% endif %}
-	<p class="meta">Posted on <span class="postdate">{{ page.date | date: "%b %d, %Y" }} | {{ page.category }}{% if post.category == 'ios' %}iOS{% else %}{% if post.category == 'mfc' %}MFC{% else %}{% if post.category == 'unix' %}UNIX{% else %}{% if post.category == 'php' %}PHP{% else %}{% if cat[0] == 'j2ee' %}Java EE{% else %}<i style="text-transform:capitalize;">{{ post.category }}</i>{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% if page.tags.size %} | {{ page.tags | join: ', ' }} {% endif%}</span></p>
+	<p class="meta">Posted on <span class="postdate">{{ page.date | date: "%b %d, %Y" }} | Category: {{ page.category }}{% if post.category == 'ios' %}iOS{% else %}{% if post.category == 'mfc' %}MFC{% else %}{% if post.category == 'unix' %}UNIX{% else %}{% if post.category == 'php' %}PHP{% else %}{% if cat[0] == 'j2ee' %}Java EE{% else %}<i style="text-transform:capitalize;">{{ post.category }}</i>{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% if page.tags.size %} | Tags: {{ page.tags | join: ', ' }} {% endif%}</span></p>
 	<hr>
 	<div class="post-content">{{ content }}</div>
 	<!-- Author -->
