@@ -15,7 +15,7 @@ title: Meniny's Blog
 		{% else %}
 			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 		{% endif %}
-		<p class="meta"><span class="postdate">{{ post.date | date: "%b %d, %Y" }} | Category: {% if post.category == 'ios' %}iOS{% else %}{% if post.category == 'mfc' %}MFC{% else %}{% if post.category == 'unix' %}UNIX{% else %}{% if post.category == 'php' %}PHP{% else %}{% if cat[0] == 'j2ee' %}Java EE{% else %}<i style="text-transform:capitalize;">{{ post.category }}</i>{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% if post.tags.size %} | Tags: {{ post.tags | join: ', ' }} {% endif%} | {{ post.content | number_of_words }} words</span></p>
+		<p class="meta"><span class="postdate">{{ post.date | date: "%b %d, %Y" }} | Category: {% if post.category == 'ios' %}iOS{% else %}{% if post.category == 'mfc' %}MFC{% else %}{% if post.category == 'unix' %}UNIX\Linux{% else %}{% if post.category == 'php' %}PHP{% else %}{% if cat[0] == 'j2ee' %}Java EE{% else %}<i style="text-transform:capitalize;">{{ post.category }}</i>{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}{% if post.tags.size %} | Tags: {{ post.tags | join: ', ' }} {% endif%} | {{ post.content | number_of_words }} words</span></p>
 <!-- 		<div class="post-content">{{ post.content }}</div> -->
 		<div class="post-content">{{ post.excerpt }}</div>
 			
