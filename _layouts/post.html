@@ -11,7 +11,7 @@ layout: default
 	{% else %}
 		<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 	{% endif %}
-	<p class="meta">Posted on <span class="postdate">{{ page.date | date: "%b %d, %Y" }} | Category: <a href="/categories#{{ page.category }}">{% if page.category == 'ios' %}iOS{% else %}{% if page.category == 'mfc' %}MFC{% else %}{% if page.category == 'unix' %}UNIX&frasl;Linux{% else %}{% if page.category == 'php' %}PHP{% else %}{% if cat[0] == 'j2ee' %}Java EE{% else %}<i style="text-transform:capitalize;">{{ page.category }}</i>{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}</a>{% if page.tags.size %} | Tags: {% for tag in page.tags %}<a href="/tags#{{ tag[0] }}">{{ tag[0] }}  </a>{% endfor %}{% endif %} | {{ page.content | number_of_words }} words</span></p>
+	<p class="meta">Posted on <span class="pagedate">{{ page.date | date: "%b %d, %Y" }} | Category: <a href="/categories#{{ page.category }}">{% if page.category == 'ios' %}iOS{% else %}{% if page.category == 'mfc' %}MFC{% else %}{% if page.category == 'unix' %}UNIX&frasl;Linux{% else %}{% if page.category == 'php' %}PHP{% else %}{% if cat[0] == 'j2ee' %}Java EE{% else %}<i style="text-transform:capitalize;">{{ page.category }}</i>{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}</a>{% if page.tags.size %} | Tags: {% for tag in page.tags %}<a href="/tags#{{ tag[0] }}">{{ tag[0] }}</a> / {% endfor %}{% endif %} | {{ page.content | number_of_words }} words</span></p>
 	<hr><!--  Tags: {{ page.tags | join: ', ' }} {% endif%}  -->
 	<div class="post-content">{{ content }}</div>
 	<!-- Author -->
