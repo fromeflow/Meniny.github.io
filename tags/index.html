@@ -8,9 +8,10 @@ title: Tags
 	<h1>Tags</h1>
 	
 	{% for tag in site.tags %} 
-		<a href="/#{{ tag[0] }}">[  {{ tag[0] }}  ]</a>
+		<a href="/#{{ tag[0] }}"> [ {{ tag[0] }} ] </a>
 	{% endfor %}
 	<br/>	
+	<br/>
 	{% for tag in site.tags %} 
 		<h2>{{ tag[0] }} [{{ tag[1].size }}]</h2>
 	<ul>
