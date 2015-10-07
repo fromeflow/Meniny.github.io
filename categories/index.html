@@ -6,6 +6,10 @@ title: Categories
 <div id="blog-categories">
 	<h1>Categories</h1>
 	
+	<h2>|</h2>{% for cat in site.categories %}
+		<a href="#{{ cat[0] }}"> {{ cat[0] }} |</a>
+	{% endfor %}
+	
 	{% for cat in site.categories %} 
 	
 	{% if cat[0] != 'blog' %} 
