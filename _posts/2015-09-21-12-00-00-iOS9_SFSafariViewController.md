@@ -2,7 +2,7 @@
 layout: post  
 category: "ios"  
 title: "iOS 9 : SFSafariViewController"  
-tags: [iOS,SFSafariViewController]  
+tags: [iOS,iOS 9,SFSafariViewController]  
 ---
 除了我在前面 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/2015/09/18/23-08-00-iOS9_URLScheme/)、[***Bitcode***](http://www.meniny.cn/2015/09/18/23-07-00-iOS9_Bitcode/)、[***ATS***](http://www.meniny.cn/2015/09/18/23-06-00-iOS9_ATS/) 和 [***后台定位***](http://www.meniny.cn/2015/09/25/14-00-00-iOS9_Location/) 等需要开发人员进行适配的新举措外，iOS 9 还引入了很多实用的新特性，本文主要来介绍其中之一: ***`SFSafariViewController`***。
 

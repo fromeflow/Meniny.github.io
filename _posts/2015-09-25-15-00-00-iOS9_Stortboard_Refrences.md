@@ -2,7 +2,7 @@
 layout: post
 category: "ios"
 title:  "iOS 9 : StoryBoard Refrences"
-tags: [iOS,StoryBoard Refrences,StoryBoard]
+tags: [iOS,iOS 9,StoryBoard Refrences,StoryBoard]
 ---
 除了前面 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/2015/09/18/23-08-00-iOS9_URLScheme/)、[***Bitcode***](http://www.meniny.cn/2015/09/18/23-07-00-iOS9_Bitcode/)、[***ATS***](http://www.meniny.cn/2015/09/18/23-06-00-iOS9_ATS/) 和 [***后台定位***](http://www.meniny.cn/2015/09/25/14-00-00-iOS9_Location/) 之外，iOS 9 还对另外一个常用的工具——`StoryBoard` 做了一些改进。
 
