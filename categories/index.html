@@ -8,6 +8,28 @@ title: Categories
 	
 	{% for cat in site.categories %}
 		<a href="#{{ cat[0] }}"> {{ cat[0] }} |</a>
+		
+		{% if cat[0] == 'ios' %} 
+			<a href="#{{ cat[0] }}">iOS |</a>
+		{% else %}
+			{% if cat[0] == 'mfc' %} 
+				<a href="#{{ cat[0] }}"> MFC |</a>
+			{% else %}
+				{% if cat[0] == 'unix' %} 
+					<a href="#{{ cat[0] }}"> UNIX&frasl;Linux |</a>
+				{% else %}
+					{% if cat[0] == 'php' %} 
+					<a href="#{{ cat[0] }}"> PHP |</a>
+					{% else %}
+						{% if cat[0] == 'j2ee' %} 
+						<a href="#{{ cat[0] }}"> Java EE |</a>
+						{% else %}
+						<a href="#{{ cat[0] }}"><div style="text-transform:capitalize;">{{ cat[0] }} |</div></a>
+						{% endif %} 
+					{% endif %} 
+				{% endif %} 
+			{% endif %} 
+			{% endif %} 
 	{% endfor %}
 	
 	{% for cat in site.categories %} 
