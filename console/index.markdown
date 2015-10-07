@@ -28,6 +28,8 @@ There are <strong>{{ site.posts.size }}</strong> blogs in <strong>{{ site.catego
 
 * `2015-10-01`: Add the `'Night Mode'`
 
+* `2015-10-07`: New 404 page
+
 
 {% include comment.html %} 
 
