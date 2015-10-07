@@ -12,7 +12,7 @@ layout: default
 		<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 	{% endif %}
 	<p class="meta"><span class="pagedate">{{ page.date | date: "%b %d, %Y" }} | Category: <a href="/categories#{{ post.category }}">{% if page.category == 'ios' %}iOS{% else %}{% if page.category == 'mfc' %}MFC{% else %}{% if page.category == 'unix' %}UNIX&frasl;Linux{% else %}{% if page.category == 'php' %}PHP{% else %}{% if cat[0] == 'j2ee' %}Java EE{% else %}<i style="text-transform:capitalize;">{{ page.category }}</i>{% endif %}{% endif %}{% endif %}{% endif %}{% endif %}</a>{% if page.tags.size %} | Tags: {% for tag in page.tags %}<a href="/tags#{{ tag }}">{{ tag }}</a>{% if forloop.last == false %} ,{% endif %}{% endfor %}{% endif %} | {{ content | number_of_words }} words</span></p>
-	<hr><!--  Tags: {{ page.tags | join: ', ' }}  -->
+	<!--  Tags: {{ page.tags | join: ', ' }}  -->
 	<div class="page-content">{{ content }}</div>
 	<!-- Author -->
 	<br/>
