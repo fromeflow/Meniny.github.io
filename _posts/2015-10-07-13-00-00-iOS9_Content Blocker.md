@@ -6,7 +6,7 @@ tags: [iOS,iOS 9,Content Blocker,广告拦截]
 ---
 我猜很多人已经注意到，在 iOS 9 正式版发布之后，应用商店上开始大量出现广告拦截应用，本文就和小伙伴们一起来了解一下苹果新推出的内容拦截功能—— Content Blocker。
 
-> 关于其他 iOS 9 的特性与功能，有兴趣的朋友可以参考我在 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/2015/09/18/23-08-00-iOS9_URLScheme/)、[***Bitcode***](http://www.meniny.cn/2015/09/18/23-07-00-iOS9_Bitcode/)、[***ATS***](http://www.meniny.cn/2015/09/18/23-06-00-iOS9_ATS/)、[***后台定位***](http://www.meniny.cn/2015/09/25/14-00-00-iOS9_Location/) 、[***StoryBoard Refrences***](http://www.meniny.cn/2015/09/25/15-00-00-iOS9_Stortboard_Refrences/)、[***SFSafariViewController***](http://www.meniny.cn/2015/09/21/12-00-00-iOS9_SFSafariViewController/) 以及 [Search API](http://www.meniny.cn/2015/10/07/12-00-00-iOS9_Search/)。
+> 关于其他 iOS 9 的特性与功能，有兴趣的朋友可以参考我在 ***iOS 9 适配*** 系列中提到的 [***URLSchemes***](http://www.meniny.cn/2015/09/18/23-08-00-iOS9_URLScheme/)、[***Bitcode***](http://www.meniny.cn/2015/09/18/23-07-00-iOS9_Bitcode/)、[***ATS***](http://www.meniny.cn/2015/09/18/23-06-00-iOS9_ATS/)、[***后台定位***](http://www.meniny.cn/2015/09/25/14-00-00-iOS9_Location/) 、[***StoryBoard Refrences***](http://www.meniny.cn/2015/09/25/15-00-00-iOS9_Stortboard_Refrences/)、[***SFSafariViewController***](http://www.meniny.cn/2015/09/21/12-00-00-iOS9_SFSafariViewController/) 以及 [***Search API***](http://www.meniny.cn/2015/10/07/12-00-00-iOS9_Search/)。
 
 ### 准备工作
 
