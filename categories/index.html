@@ -7,8 +7,6 @@ title: Categories
 	<h1>Categories</h1>
 	
 	{% for cat in site.categories %}
-		<a href="#{{ cat[0] }}"> {{ cat[0] }} |</a>
-		
 		{% if cat[0] == 'ios' %} 
 			<a href="#{{ cat[0] }}">iOS |</a>
 		{% else %}
