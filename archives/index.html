@@ -19,6 +19,7 @@ title: Archives
 	{% endfor %} -->
 	<h1>Archives</h1>
 	From 2007 to {{ site.time | date: '%Y' }}.
+	<br/>
 	 {% for post in site.posts limit:100 %} 
 	 {% unless post.next %} 
     <h2>{{ post.date | date: '%Y' }}</h2> 
