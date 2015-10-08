@@ -5,7 +5,7 @@ title: About
 # About
 
 ### Base
-Software developer on PC, Linux, ARM and iOS platform. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.
+Software developer on PC, Linux, ARM and iOS platform. Chief Technology Officer. Crafty. Blogger. Traveller. Big fan of Apple. Love of color. Doggies are my fave.
 
 ### Links
 App Store: [Shenyi Li on App Store](https://itunes.apple.com/cn/developer/shenyi-li/id1026495349){:target="_blank"}  
