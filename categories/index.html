@@ -37,21 +37,21 @@ title: Categories
 		<a name="{{ cat[0] }}"></a>
 		
 		{% if cat[0] == 'ios' %} 
-			<h2><span id="{{ cat[0] }}"><div>iOS [{{ cat[1].size }}]<div></span></h2>
+			<h2><span id="{{ cat[0] }}"><div>iOS [{{ cat[1].size }}]</div></span></h2>
 		{% else %}
 			{% if cat[0] == 'mfc' %} 
-				<h2><span id="{{ cat[0] }}"><div>MFC [{{ cat[1].size }}]<div></span></h2>
+				<h2><span id="{{ cat[0] }}"><div>MFC [{{ cat[1].size }}]</div></span></h2>
 			{% else %}
 				{% if cat[0] == 'unix' %} 
-					<h2><span id="{{ cat[0] }}"><div>UNIX&frasl;Linux [{{ cat[1].size }}]<div></span></h2>
+					<h2><span id="{{ cat[0] }}"><div>UNIX&frasl;Linux [{{ cat[1].size }}]</div></span></h2>
 				{% else %}
 					{% if cat[0] == 'php' %} 
-					<h2><span id="{{ cat[0] }}"><div>PHP [{{ cat[1].size }}]<div></span></h2>
+					<h2><span id="{{ cat[0] }}"><div>PHP [{{ cat[1].size }}]</div></span></h2>
 					{% else %}
 						{% if cat[0] == 'j2ee' %} 
-						<h2><span id="{{ cat[0] }}"><div>Java EE [{{ cat[1].size }}]<div></span></h2>
+						<h2><span id="{{ cat[0] }}"><div>Java EE [{{ cat[1].size }}]</div></span></h2>
 						{% else %}
-						<h2><span id="{{ cat[0] }}"><div style="text-transform:capitalize;">{{ cat[0] }} [{{ cat[1].size }}]<div></span></h2>
+						<h2><span id="{{ cat[0] }}"><div style="text-transform:capitalize;">{{ cat[0] }} [{{ cat[1].size }}]</div></span></h2>
 						{% endif %} 
 					{% endif %} 
 				{% endif %} 
