@@ -15,14 +15,29 @@
 <!-- 	<link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
 	
 <script language="javascript">
-       function change(num){
+		var nightmode = 'undefined';
+        function change(num){
 			flag = '';
             switch(num){
-                case 1:flag = "colors-light.css";{% assign nightMode == false%};break;
-                case 2:flag = "colors-dark.css";{% assign nightMode == true%};break;
-                default:flag = "colors-light.css";{% assign nightMode == false%};break;
+                case 1:flag = "colors-light.css";nightmode = 'no';break;
+                case 2:flag = "colors-dark.css";nightmode = 'yes';break;
+                default:flag = "colors-light.css";nightmode = 'no';break;
             }
             document.getElementById('changecss').href = '/assets/css/' + flag;
+			
+			document.getElementById('argshome').href = '/?nightmode=' + nightmode;
+			document.getElementById('argscategories').href = '/categories?nightmode=' + nightmode;
+			document.getElementById('argstags').href = '/tags?nightmode=' + nightmode;
+			document.getElementById('argsarchives').href = '/archives?nightmode=' + nightmode;
+			document.getElementById('argslinks').href = '/links?nightmode=' + nightmode;
+			document.getElementById('argsfaqs').href = '/faqs?nightmode=' + nightmode;
+			document.getElementById('argsconsole').href = '/console?nightmode=' + nightmode;
+			document.getElementById('argsabout').href = '/about?nightmode=' + nightmode;
+			
+			document.getElementById('argsnextpage').href = '/page{{paginator.previous_page}}/?nightmode=' + nightmode;
+			document.getElementById('argsprepage').href = '/page{{paginator.next_page}}/?nightmode=' + nightmode;
+			document.getElementById('argsnextpost').href = '{{page.previous.url}}?nightmode=' + nightmode;
+			document.getElementById('argsprepost').href = '{{page.next.url}}?nightmode=' + nightmode;
         }
 		
 		function modechange(){
@@ -75,14 +90,14 @@
     <div id="sidebar">
       <nav>
         <ul>
-          <li><a href="/?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Home</a></li>
-          <li><a href="/categories?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Categories</a></li>
-          <li><a href="/tags?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Tags</a></li>
-          <li><a href="/archives?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Archive</a></li>
-          <li><a href="/links?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Links</a></li>
-          <li><a href="/faqs?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">FAQs</a></li>
-		  <li><a href="/console?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Console</a></li>
-          <li><a href="/about?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">About</a></li>
+          <li><a href="/" id="argshome">Home</a></li>
+          <li><a href="/categories" id="argscategories">Categories</a></li>
+          <li><a href="/tags" id="argstags">Tags</a></li>
+          <li><a href="/archives" id="argsarchives">Archive</a></li>
+          <li><a href="/links" id="argslinks">Links</a></li>
+          <li><a href="/faqs" id="argsfaqs">FAQs</a></li>
+		  <li><a href="/console" id="argsconsole">Console</a></li>
+          <li><a href="/about" id="argsabout">About</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
 		  <br/>
 		  <li><a href="javascript:change(1);">☀︎ Day</a></li>

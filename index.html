@@ -30,14 +30,14 @@ title: Meniny's Blog
 			{% if paginator.page == 2 %}
 				<a class="prev left" href="/">&larr; Newer</a>
 			{% else %}
-				<a class="prev left" href="/page{{paginator.previous_page}}/?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">&larr; Newer</a>
+				<a class="prev left" href="/page{{paginator.previous_page}}/">&larr; Newer</a>
 			{% endif %}
 		{% endif %}
 
-		<span class="pages" id="pagecontroll">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+		<span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
 
 		{% if paginator.next_page %}
-		<a class="next right" href="/page{{paginator.next_page}}//?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Older &rarr;</a>
+		<a class="next right" href="/page{{paginator.next_page}}/">Older &rarr;</a>
 		{% endif %}
 
 	</div>
