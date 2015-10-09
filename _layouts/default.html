@@ -34,6 +34,8 @@
 			document.getElementById('argsconsole').href = '/console?nightmode=' + nightmode;
 			document.getElementById('argsabout').href = '/about?nightmode=' + nightmode;
 			
+			document.getElementById('argsposttitle').href = '{{ post.external-url }}' + nightmode;
+			
 			document.getElementById('argsnextpage').href = '/page{{paginator.previous_page}}/?nightmode=' + nightmode;
 			document.getElementById('argsprepage').href = '/page{{paginator.next_page}}/?nightmode=' + nightmode;
 			document.getElementById('argsnextpost').href = '{{page.previous.url}}?nightmode=' + nightmode;

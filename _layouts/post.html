@@ -19,7 +19,7 @@ layout: default
 	  {%if page.previous%}
 	  <span class="next">
 	    Previous：
-	    <a href="{{page.previous.url}}">
+	    <a href="{{page.previous.url}}" id="argsprepost">
 	      {{page.previous.title}}
 	    </a>
 	  </span>
@@ -27,7 +27,7 @@ layout: default
 	  {%if page.next%}
 	  <span class="prev">
 	    Next：
-	    <a href="{{page.next.url}}">
+	    <a href="{{page.next.url}}" id="argsnextpost">
 	      {{page.next.title}}
 	    </a>
 	  </span>

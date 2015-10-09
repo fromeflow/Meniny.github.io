@@ -9,7 +9,7 @@ title: Meniny's Blog
 	
 		{% if post.external-url %}
 			<h1>
-				<a href="{{ post.external-url }}">{{ post.title }}</a>
+				<a href="{{ post.external-url }}" id="argsposttitle">{{ post.title }}</a>
 				<a class="anchor" href="{{ post.url }}"><i class="icon-anchor"></i></a>
 			</h1>
 		{% else %}
@@ -30,14 +30,14 @@ title: Meniny's Blog
 			{% if paginator.page == 2 %}
 				<a class="prev left" href="/">&larr; Newer</a>
 			{% else %}
-				<a class="prev left" href="/page{{paginator.previous_page}}/">&larr; Newer</a>
+				<a class="prev left" href="/page{{paginator.previous_page}}/" id="argsprepage">&larr; Newer</a>
 			{% endif %}
 		{% endif %}
 
 		<span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
 
 		{% if paginator.next_page %}
-		<a class="next right" href="/page{{paginator.next_page}}/">Older &rarr;</a>
+		<a class="next right" href="/page{{paginator.next_page}}/" id="argsnextpage">Older &rarr;</a>
 		{% endif %}
 
 	</div>
