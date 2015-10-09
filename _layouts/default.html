@@ -17,7 +17,7 @@
 <script language="javascript">
 		var nightmode = '0';
         function change(num){
-			alert('change(' + num + ')');
+			alert('change(' + nu + ')');
 			flag = '';
             switch(num){
                 case 1:
@@ -35,6 +35,7 @@
             }
             document.getElementById('changecss').href = '/assets/css/' + flag;
 			
+			alert(nightmode);
 			document.getElementById('argshome').href = '/?nightmode=' + nightmode;
 			document.getElementById('argscategories').href = '/categories?nightmode=' + nightmode;
 			document.getElementById('argstags').href = '/tags?nightmode=' + nightmode;
