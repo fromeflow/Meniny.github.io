@@ -15,7 +15,7 @@
 <!-- 	<link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
 	
 <script language="javascript">
-		var nightmode = 'undefined';
+		var nightmode = '0';
         function change(num){
 			flag = '';
             switch(num){
@@ -38,8 +38,8 @@
 			
 			document.getElementById('argsnextpage').href = '/page{{paginator.previous_page}}/?nightmode=' + nightmode;
 			document.getElementById('argsprepage').href = '/page{{paginator.next_page}}/?nightmode=' + nightmode;
-			document.getElementById('argsnextpost').href = '{{page.previous.url}}?nightmode=' + nightmode;
-			document.getElementById('argsprepost').href = '{{page.next.url}}?nightmode=' + nightmode;
+			document.getElementById('argsnextpost').href = '{{page.previous.url}}/?nightmode=' + nightmode;
+			document.getElementById('argsprepost').href = '{{page.next.url}}/?nightmode=' + nightmode;
         }
 		
 		function modechange(){
