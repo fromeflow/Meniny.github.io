@@ -16,6 +16,24 @@
 	
 <script language="javascript">
 		var nightmode = '0';
+		
+		function changehref() {
+			document.getElementById('argshome').href = '/?nightmode=' + nightmode;
+			document.getElementById('argscategories').href = '/categories?nightmode=' + nightmode;
+			document.getElementById('argstags').href = '/tags?nightmode=' + nightmode;
+			document.getElementById('argsarchives').href = '/archives?nightmode=' + nightmode;
+			document.getElementById('argslinks').href = '/links?nightmode=' + nightmode;
+			document.getElementById('argsfaqs').href = '/faqs?nightmode=' + nightmode;
+			document.getElementById('argsconsole').href = '/console?nightmode=' + nightmode;
+			document.getElementById('argsabout').href = '/about?nightmode=' + nightmode;
+			
+			document.getElementById('argsposttitle').href = '{{ post.external-url }}' + nightmode;
+			document.getElementById('argsnextpage').href = '/page{{paginator.previous_page}}/?nightmode=' + nightmode;
+			document.getElementById('argsprepage').href = '/page{{paginator.next_page}}/?nightmode=' + nightmode;
+			document.getElementById('argsnextpost').href = '{{page.previous.url}}/?nightmode=' + nightmode;
+			document.getElementById('argsprepost').href = '{{page.next.url}}/?nightmode=' + nightmode;
+        }
+		
         function change(num){
 			//alert('change(' + num + ')');
 			flag = '';
@@ -36,24 +54,8 @@
             document.getElementById('changecss').href = '/assets/css/' + flag;
 			
 			//alert('nightmode=' + nightmode);
+			changehref();
 		}
-		
-		function changehref() {
-			document.getElementById('argshome').href = '/?nightmode=' + nightmode;
-			document.getElementById('argscategories').href = '/categories?nightmode=' + nightmode;
-			document.getElementById('argstags').href = '/tags?nightmode=' + nightmode;
-			document.getElementById('argsarchives').href = '/archives?nightmode=' + nightmode;
-			document.getElementById('argslinks').href = '/links?nightmode=' + nightmode;
-			document.getElementById('argsfaqs').href = '/faqs?nightmode=' + nightmode;
-			document.getElementById('argsconsole').href = '/console?nightmode=' + nightmode;
-			document.getElementById('argsabout').href = '/about?nightmode=' + nightmode;
-			
-			document.getElementById('argsposttitle').href = '{{ post.external-url }}' + nightmode;
-			document.getElementById('argsnextpage').href = '/page{{paginator.previous_page}}/?nightmode=' + nightmode;
-			document.getElementById('argsprepage').href = '/page{{paginator.next_page}}/?nightmode=' + nightmode;
-			document.getElementById('argsnextpost').href = '{{page.previous.url}}/?nightmode=' + nightmode;
-			document.getElementById('argsprepost').href = '{{page.next.url}}/?nightmode=' + nightmode;
-        }
 		
 		function modechange(){
 			var today = new Date();
