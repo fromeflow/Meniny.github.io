@@ -15,16 +15,7 @@
 <!-- 	<link href="/assets/css/colors-dark.css" rel="stylesheet" /> -->
 	
 <script language="javascript">
-		function judge() {
-			urlinfo=window.location.href; //获取当前页面的url 
-			len=urlinfo.length;//获取url的长度 
-			offset=urlinfo.indexOf("?");//设置参数字符串开始的位置 
-			newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串 
-			newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割 
-			newsid=newsids[1];//得到参数值 
-			alert("您要传递的参数值是"+newsid); 
-		}
-        function change(num){
+       function change(num){
 			flag = '';
             switch(num){
                 case 1:flag = "colors-light.css";{% assign nightMode == false%}break;
@@ -38,13 +29,31 @@
 			var today= new Date();
 			var hour=today.getHours();
 			if(hour>7&&hour<20){
-				change(1)
+				change(1);
 			}else{
-				change(2)
+				change(2);
 			}
 		}
-		window.onload=judge();
-		window.onload=modechange();
+		
+		function judgeArg() {
+			urlinfo=window.location.href; //获取当前页面的url 
+			len=urlinfo.length;//获取url的长度 
+			offset=urlinfo.indexOf("?");//设置参数字符串开始的位置 
+			newsidinfo=urlinfo.substr(offset,len)//取出参数字符串 这里会获得类似“id=1”这样的字符串 
+			newsids=newsidinfo.split("=");//对获得的参数字符串按照“=”进行分割 
+			newsid=newsids[1];//得到参数值 
+			if(newid == 'undefined') {
+				modechange();
+			} else {
+				if (newid == 'yes') {
+					change(2);
+				} else {
+					change(1);
+				}
+			}
+		}
+		
+		window.onload=judgeArg();
 		
 	</script>
 
@@ -66,14 +75,14 @@
     <div id="sidebar">
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/categories">Categories</a></li>
-          <li><a href="/tags">Tags</a></li>
-          <li><a href="/archives">Archive</a></li>
-          <li><a href="/links">Links</a></li>
-          <li><a href="/faqs">FAQs</a></li>
-		  <li><a href="/console">Console</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Home</a></li>
+          <li><a href="/categories?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Categories</a></li>
+          <li><a href="/tags?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Tags</a></li>
+          <li><a href="/archives?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Archive</a></li>
+          <li><a href="/links?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Links</a></li>
+          <li><a href="/faqs?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">FAQs</a></li>
+		  <li><a href="/console?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">Console</a></li>
+          <li><a href="/about?nightMode={% if nightMode == true %}yes{% else %}no{% endif %}">About</a></li>
           <li><a href="/feed.xml">RSS Feed</a></li>
 		  <br/>
 		  <li><a href="javascript:change(1);">☀︎ Day</a></li>
